@@ -95,7 +95,8 @@
   <script src="../js/todolist.js"></script>
 
   <script>
-    $(':input[type="submit"]').prop('disabled', true);
+    $(document).ready(function(){
+      $(':input[type="submit"]').prop('disabled', true);
     $('#password2').on('keyup', function () {
       if ($('#password').val() == $('#password2').val()) {
         $('#message').html('Matching').css('color', 'green');
@@ -121,6 +122,7 @@
           $('#password2').attr('type', 'password');
           $("#eye2").removeClass("mdi mdi-eye-off").addClass("mdi mdi-eye");
         }
+    });
     });
   </script>
   <!-- endinject -->
