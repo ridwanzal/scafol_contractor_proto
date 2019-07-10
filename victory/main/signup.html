@@ -54,6 +54,7 @@
                           <label for="password2">Password</label>
                           <input type="password" class="form-control" id="password2" placeholder="Confirm password">
                           <i class="mdi mdi-eye"></i>
+                          <span id='message'></span>
                         </div>
                         <div class="mt-5">
                           <a class="btn btn-block btn-primary btn-lg font-weight-medium" href="../index.html">Sign Up</a>
@@ -93,6 +94,15 @@
   <script src="../js/misc.js"></script>
   <script src="../js/settings.js"></script>
   <script src="../js/todolist.js"></script>
+
+  <script>
+    $('#password2').on('keyup', function () {
+      if ($('#password').val() == $('#password2').val()) {
+        $('#message').html('Matching').css('color', 'green');
+      } else 
+        $('#message').html('Not Matching').css('color', 'red');
+    });
+  </script>
   <!-- endinject -->
 </body>
 
