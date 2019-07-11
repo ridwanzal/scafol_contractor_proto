@@ -14,6 +14,9 @@
   <!-- plugin css for this page -->
   <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="../node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css">
+  <link rel="stylesheet" href="../node_modules/jsgrid/dist/jsgrid.min.css" />
+  <link rel="stylesheet" href="../node_modules/jsgrid/dist/jsgrid-theme.min.css" />
+
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="../css/style.css">
@@ -448,16 +451,127 @@
                       mage place thing may sixth created. Moveth, gathered abundantly their thing.
                     </div>
                     <div class="tab-pane fade" id="contact-6-3" role="tabpanel" aria-labelledby="tab-6-3">
-                      Doesn't moveth earth creature two saw. Divide i, day divided evening every male very whales form. Form. Creature over, grass moving make multiply doesn't image image replenish is fourth. 
-                      Seasons rule, together great. Spirit. Creature one very moved earth gathered.
+                      <div class="row">
+                        <div class="col-md-12 ">
+                          <p>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#import-ts">Import Data</a>
+                          </p>
+                          
+                          <table class="table table-hovered">
+                            <thead>
+                              <tr>
+                                <td>Item Pekerjaan</td>
+                                <td>Bobot</td>
+                                <td>Day 1</td>
+                                <td>Day 2</td>
+                                <td>Day 3</td>
+                                <td>Day 4</td>
+                                <td>Day x</td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1. Persiapan</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>1.1 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>1.2 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>1.3 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>2. Pondasi</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>2.1 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>2.2 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>2.3 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-12 text-center">
+                          <p class="mt-4 pt-4 mx-auto">
+                            There is no data<br>
+                            Input your Contract Schedule and WBS First
+                          </p>
+                        </div>
+                      </div>
                     </div>
                     <div class="tab-pane fade" id="contact-6-4" role="tabpanel" aria-labelledby="tab-6-4">
-                      123 Doesn't moveth earth creature two saw. Divide i, day divided evening every male very whales form. Form. Creature over, grass moving make multiply doesn't image image replenish is fourth. 
-                      Seasons rule, together great. Spirit. Creature one very moved earth gathered.
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#upload-design">Upload Design</a>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#create-folder">Create Folder</a>
+                          </p>
+
+                          <p class="mt-4 pt-4 mx-auto  text-center">
+                            There is no data<br>
+                            Input your Contract Schedule and WBS First
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-
-                  
                 </div>
               </div>
             </div>
@@ -490,22 +604,17 @@
                   </div>
                 </div>
               </div>
-
             </div>
-
-
-
           </div>
-
         </div>
 
 
-        <div class="modal fade" id="uploaddoc" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
-          <div class="modal-dialog" role="document">
+        <div class="modal fade" id="import-ts" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel-2">
-                  Upload Document
+                  Add Time Sechedule
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -513,6 +622,71 @@
               </div>
               <div class="modal-body">
                <div class="row">
+
+                <div class="col-md-12">
+                  <div class="row grid-margin">
+                    <div class="col-12">
+                      <div id="tambahTableJs"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-success">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal fade" id="create-folder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel-2">
+                Create Folder
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="text" name="" class="form-control border-primary" placeholder="Nama Folder">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success form-control">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="modal fade" id="upload-design" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel-2">
+                Upload Design
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
 
                 <div class="col-md-12">
                   <blockquote class="blockquote blockquote-primary">
@@ -551,12 +725,8 @@
                         </div>
                       </div>                    
                     </div>
-
                   </div>
                 </div>
-
-
-
               </div>
             </div>
             <div class="modal-footer">
@@ -569,116 +739,19 @@
 
 
 
-      <div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel-2">
-                Desain Atap <i class="fa fa-download"></i>
-              </h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-             <div class="row">
-
-              <div class="col-md-6">
-                <blockquote class="blockquote blockquote-primary">
-                  <p class="text-center">
-                    <hr>
-                    <hr>
-                    <hr>
-                    <hr>
-                    <p class="text-center">View Document</p>
-                    <hr>
-                    <hr>
-                    <hr>
-                    <hr>
-                  </p>
-                </blockquote>
-
-                <div class="card card-inverse-danger" id="context-menu-multi">
-                  <div class="card-body">
-                    <b>Comment Note : </b>
-                    <p class="card-text">
-                      Tolong segera dilaksanakan!
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="col-md-6">
-                <div class="row">
-                  <div class="col-md-12 text-center">
-                   <b> 
-                    Upload by Reza <br>
-                    11-07-2019 <br>
-                    12:00 
-                  </b>
-                </div>                    
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  Use For<br> atap<br> Pondasi
-                </div>                    
-              </div>
-              <hr>
-
-              <div class="list d-flex align-items-center border-bottom py-3">
-                <img class="img-sm rounded-circle" src="../images/faces/face5.jpg" alt="">
-                <div class="wrapper w-100 ml-3">
-                  <p class="mb-0"><b>Stella </b>posted :</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="d-flex align-items-center">
-                      <i class="mdi mdi-clock text-muted mr-1"></i>
-                      <p class="mb-0">Siapp BosQ !!</p>
-                    </div>
-                    <small class="text-muted ml-auto">17:00</small>
-                  </div>
-                </div>
-              </div>
-              <div class="list d-flex align-items-center border-bottom py-3">
-                <img class="img-sm rounded-circle" src="../images/faces/face2.jpg" alt="">
-                <div class="wrapper w-100 ml-3">
-                  <p class="mb-0"><b>Shery </b>posted :</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="d-flex align-items-center">
-                      <i class="mdi mdi-clock text-muted mr-1"></i>
-                      <p class="mb-0">OK Siap grak !!</p>
-                    </div>
-                    <small class="text-muted ml-auto">17:00</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
+      <!-- content-wrapper ends -->
+      <!-- partial:partials/_footer.html -->
+      <footer class="footer">
+        <div class="container-fluid clearfix">
+          <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2017 <a href="#">UrbanUI</a>. All rights reserved.</span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success">Submit</button>
-          <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-        </div>
-      </div>
+      </footer>
+      <!-- partial -->
     </div>
+    <!-- row-offcanvas ends -->
   </div>
-
-
-
-  <!-- content-wrapper ends -->
-  <!-- partial:partials/_footer.html -->
-  <footer class="footer">
-    <div class="container-fluid clearfix">
-      <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2017 <a href="#">UrbanUI</a>. All rights reserved.</span>
-      <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
-    </div>
-  </footer>
-  <!-- partial -->
-</div>
-<!-- row-offcanvas ends -->
-</div>
-<!-- page-body-wrapper ends -->
+  <!-- page-body-wrapper ends -->
 </div>
 <!-- container-scroller -->
 
@@ -695,6 +768,7 @@
 <script src="../node_modules/morris.js/morris.min.js"></script>
 <script src="../node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
 <!-- End plugin js for this page-->
+<script src="../node_modules/jsgrid/dist/jsgrid.min.js"></script>
 <!-- inject:js -->
 <script src="../js/off-canvas.js"></script>
 <script src="../js/hoverable-collapse.js"></script>
@@ -702,8 +776,106 @@
 <script src="../js/settings.js"></script>
 <script src="../js/todolist.js"></script>
 <!-- endinject -->
+<!-- <script src="../js/js-grid.js"></script>
+--><script src="../js/db.js"></script>
 <!-- Custom js for this page-->
 <script src="../js/dashboard.js"></script>
 <!-- End custom js for this page-->
+
+
+<script type="text/javascript">
+
+  if($("#tambahTableJs").length) {
+    $("#tambahTableJs").jsGrid({
+      height: "500px",
+      width: "100%",
+      filtering: true,
+      editing: true,
+      inserting: true,
+      sorting: true,
+      paging: true,
+      autoload: true,
+      pageSize: 15,
+      pageButtonCount: 5,
+      deleteConfirm: "Do you really want to delete the client?",
+      data: [
+      {
+        "Item Pekerjaan": "1. Persiapan",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      },
+      {
+        "Item Pekerjaan": "1.1 ------------",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      },
+      {
+        "Item Pekerjaan": "1.2 ------------",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      },
+      {
+        "Item Pekerjaan": "1.3 ------------",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      },
+      {
+        "Item Pekerjaan": "2. Pondasi",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      },
+      {
+        "Item Pekerjaan": "2.1 ------------",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      },
+      {
+        "Item Pekerjaan": "2.2 ------------",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      },
+      {
+        "Item Pekerjaan": "2.3 ------------",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      }
+      ],
+      fields: [{
+        name: "Item Pekerjaan",
+        type: "text",
+        width: 150
+      },
+      {
+        name: "Bobot",
+        type: "text",
+        width: 50
+      },
+      {
+        name: "Day 1",
+        type: "text",
+        width: 50
+      },
+      {
+        name: "Day 2",
+        type: "text",
+        width: 50
+      },
+      {
+        type: "control"
+      }
+      ]
+    });
+  }
+
+
+</script>
 </body>
 </html>
