@@ -14762,7 +14762,8 @@ input:focus {
 /* Navbar */
 .navbar {
   font-family: "roboto-medium", sans-serif;
-  background: linear-gradient(88deg, #13b4ca, #18cabe);
+  /* background: linear-gradient(88deg, #13b4ca, #18cabe); */
+  background: linear-gradient(88deg, #ff9c09ff, #ffc209);
   transition: background 0.25s ease;
   -webkit-transition: background 0.25s ease;
   -moz-transition: background 0.25s ease;
@@ -14772,8 +14773,9 @@ input:focus {
     -webkit-transition: width 0.25s ease, background 0.25s ease;
     -moz-transition: width 0.25s ease, background 0.25s ease;
     -ms-transition: width 0.25s ease, background 0.25s ease;
-    background: #ffffff;
-    width: 255px;
+    /* background: #ffffff; */
+    /* width: 255px; */
+    width : 185px;
     height: 58px; }
     .sidebar-dark .navbar .navbar-brand-wrapper {
       background: #3a3f51; }
