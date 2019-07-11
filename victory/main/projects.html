@@ -18,6 +18,8 @@
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../libs/dropzone/dist/dropzone.css">
+  <link rel="stylesheet" href="../libs/leaflet/leaflet.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="../images/favicon.png" />
 </head>
@@ -106,7 +108,7 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                            <form class="dropzone" id="my-awesome-dropzone">
+                            <form>
                                 <div class="form-group row">
                                     <div class="col">
                                         <label for="project-name" class="col-form-label">Project Name</label>
@@ -130,10 +132,8 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="fallback">
-                                    <input name="file" type="file" multiple />
-                                </div>
                               </form>
+                              <form action="/upload-target" class="dropzone"></form>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-success">Submit</button>
@@ -207,6 +207,7 @@
   <!-- Custom js for this page-->
   <script src="../js/modal-demo.js"></script>
   <script src="../libs/dropzone/dist/dropzone.js"></script>
+  <script src="../libs/leaflet/leaflet.js"></script>
   <!-- End custom js for this page-->
 </body>
 
