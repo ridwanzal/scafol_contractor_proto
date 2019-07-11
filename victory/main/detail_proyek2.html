@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Admin Panel</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../libs/handsontable/dist/handsontable.full.min.css">
+  <link rel="stylesheet" type="text/css" href="https://handsontable.com/static/css/main.css">
+  <link rel="stylesheet" href="../node_modules/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../node_modules/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../node_modules/flag-icon-css/css/flag-icon.min.css">
+  <link rel="stylesheet" href="../node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+  <link rel="stylesheet" href="../node_modules/jsgrid/dist/jsgrid.min.css" />
+  <link rel="stylesheet" href="../node_modules/jsgrid/dist/jsgrid-theme.min.css" />
+
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../images/favicon.png" />
+  <script src="../libs/handsontable/dist/handsontable.full.min.js"></script>
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><img src="../images/logo.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../images/logo-mini.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown d-none d-lg-flex">
+            <a class="nav-link dropdown-toggle nav-btn" id="actionDropdown" href="#" data-toggle="dropdown">
+              <span class="btn">+ Create new</span>
+            </a>
+            <div class="dropdown-menu navbar-dropdown dropdown-left" aria-labelledby="actionDropdown">
+              <a class="dropdown-item" href="#">
+                <i class="icon-user text-primary"></i>
+                User Account
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <i class="icon-user-following text-warning"></i>
+                Admin User
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <i class="icon-docs text-success"></i>
+                Sales report
+              </a>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown d-none d-lg-flex">
+            <a class="nav-link dropdown-toggle" id="languageDropdown" href="#" data-toggle="dropdown">
+              <i class="flag-icon flag-icon-gb"></i>
+              English
+            </a>
+            <div class="dropdown-menu navbar-dropdown" aria-labelledby="languageDropdown">
+              <a class="dropdown-item font-weight-medium" href="#">
+                <i class="flag-icon flag-icon-fr"></i>
+                French
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item font-weight-medium" href="#">
+                <i class="flag-icon flag-icon-es"></i>
+                Espanol
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item font-weight-medium" href="#">
+                <i class="flag-icon flag-icon-lt"></i>
+                Latin
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item font-weight-medium" href="#">
+                <i class="flag-icon flag-icon-ae"></i>
+                Arabic
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <a class="dropdown-item">
+                <p class="mb-0 font-weight-normal float-left">You have 4 new notifications
+                </p>
+                <span class="badge badge-pill badge-warning float-right">View all</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="icon-info mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">Application Error</h6>
+                  <p class="font-weight-light small-text">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="icon-speech mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">Settings</h6>
+                  <p class="font-weight-light small-text">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="icon-envelope mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">New user registration</h6>
+                  <p class="font-weight-light small-text">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+              <i class="icon-envelope mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+              <div class="dropdown-item">
+                <p class="mb-0 font-weight-normal float-left">You have 7 unread mails
+                </p>
+                <span class="badge badge-info badge-pill float-right">View all</span>
+              </div>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="../images/faces/face4.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium">David Grey
+                    <span class="float-right font-weight-light small-text">1 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    The meeting is cancelled
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="../images/faces/face2.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium">Tim Cook
+                    <span class="float-right font-weight-light small-text">15 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    New product launch
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="../images/faces/face3.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium"> Johnson
+                    <span class="float-right font-weight-light small-text">18 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    Upcoming board meeting
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-block">
+            <a class="nav-link" href="#">
+              <i class="icon-grid"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <!-- partial:partials/_settings-panel.html -->
+        <div class="theme-setting-wrapper">
+          <div id="settings-trigger"><i class="mdi mdi-settings"></i></div>
+          <div id="theme-settings" class="settings-panel">
+            <i class="settings-close mdi mdi-close"></i>
+            <p class="settings-heading">SIDEBAR SKINS</p>
+            <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+            <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+            <p class="settings-heading mt-2">HEADER SKINS</p>
+            <div class="color-tiles mx-0 px-4">
+              <div class="tiles primary"></div>
+              <div class="tiles success"></div>
+              <div class="tiles warning"></div>
+              <div class="tiles danger"></div>
+              <div class="tiles pink"></div>
+              <div class="tiles info"></div>
+              <div class="tiles dark"></div>
+              <div class="tiles default"></div>
+            </div>
+          </div>
+        </div>
+        <div id="right-sidebar" class="settings-panel">
+          <i class="settings-close mdi mdi-close"></i>
+          <ul class="nav nav-tabs" id="setting-panel" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="setting-content">
+            <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+              <div class="add-items d-flex px-3 mb-0">
+                <form class="form w-100">
+                  <div class="form-group d-flex">
+                    <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                    <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                  </div>
+                </form>
+              </div>
+              <div class="list-wrapper px-3">
+                <ul class="d-flex flex-column-reverse todo-list">
+                  <li>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="checkbox" type="checkbox">
+                        Team review meeting at 3.00 PM
+                      </label>
+                    </div>
+                    <i class="remove mdi mdi-close-circle-outline"></i>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="checkbox" type="checkbox">
+                        Prepare for presentation
+                      </label>
+                    </div>
+                    <i class="remove mdi mdi-close-circle-outline"></i>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="checkbox" type="checkbox">
+                        Resolve all the low priority tickets due today
+                      </label>
+                    </div>
+                    <i class="remove mdi mdi-close-circle-outline"></i>
+                  </li>
+                  <li class="completed">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="checkbox" type="checkbox" checked>
+                        Schedule meeting for next week
+                      </label>
+                    </div>
+                    <i class="remove mdi mdi-close-circle-outline"></i>
+                  </li>
+                  <li class="completed">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="checkbox" type="checkbox" checked>
+                        Project review
+                      </label>
+                    </div>
+                    <i class="remove mdi mdi-close-circle-outline"></i>
+                  </li>
+                </ul>
+              </div>
+              <div class="events py-4 border-bottom px-3">
+                <div class="wrapper d-flex mb-2">
+                  <i class="mdi mdi-circle-outline text-primary mr-2"></i>
+                  <span>Feb 11 2018</span>
+                </div>
+                <p class="mb-0 font-weight-thin text-gray">Creating component page</p>
+                <p class="text-gray mb-0">build a js based app</p>
+              </div>
+              <div class="events pt-4 px-3">
+                <div class="wrapper d-flex mb-2">
+                  <i class="mdi mdi-circle-outline text-primary mr-2"></i>
+                  <span>Feb 7 2018</span>
+                </div>
+                <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+                <p class="text-gray mb-0 ">Call Sarah Graves</p>
+              </div>
+            </div>
+            <!-- To do section tab ends -->
+            <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+              <div class="d-flex align-items-center justify-content-between border-bottom">
+                <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
+                <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+              </div>
+              <ul class="chat-list">
+                <li class="list active">
+                  <div class="profile"><img src="../images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                  <div class="info">
+                    <p>Thomas Douglas</p>
+                    <p>Available</p>
+                  </div>
+                  <small class="text-muted my-auto">19 min</small>
+                </li>
+                <li class="list">
+                  <div class="profile"><img src="../images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                  <div class="info">
+                    <div class="wrapper d-flex">
+                      <p>Catherine</p>
+                    </div>
+                    <p>Away</p>
+                  </div>
+                  <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                  <small class="text-muted my-auto">23 min</small>
+                </li>
+                <li class="list">
+                  <div class="profile"><img src="../images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                  <div class="info">
+                    <p>Daniel Russell</p>
+                    <p>Available</p>
+                  </div>
+                  <small class="text-muted my-auto">14 min</small>
+                </li>
+                <li class="list">
+                  <div class="profile"><img src="../images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                  <div class="info">
+                    <p>James Richardson</p>
+                    <p>Away</p>
+                  </div>
+                  <small class="text-muted my-auto">2 min</small>
+                </li>
+                <li class="list">
+                  <div class="profile"><img src="../images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                  <div class="info">
+                    <p>Madeline Kennedy</p>
+                    <p>Available</p>
+                  </div>
+                  <small class="text-muted my-auto">5 min</small>
+                </li>
+                <li class="list">
+                  <div class="profile"><img src="../images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                  <div class="info">
+                    <p>Sarah Graves</p>
+                    <p>Available</p>
+                  </div>
+                  <small class="text-muted my-auto">47 min</small>
+                </li>
+              </ul>
+            </div>
+            <!-- chat tab ends -->
+          </div>
+        </div>
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <div class="nav-link">
+                <div class="profile-image">
+                  <img src="../images/faces/face10.jpg" alt="image"/>
+                  <span class="online-status online"></span> <!--change class online to offline or busy as needed-->
+                </div>
+                <div class="profile-name">
+                  <p class="name">
+                    Marina Michel
+                  </p>
+                  <p class="designation">
+                    Super Admin
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">
+                <i class="icon-rocket menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+                <!-- <span class="badge badge-success">New</span> -->
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/widgets.html">
+                <i class="icon-shield menu-icon"></i>
+                <span class="menu-title">Engineering</span>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="content-wrapper">
+          <div class="row">
+
+            <div class="col-md-9 col-lg-9 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Ongoing | Completed</h4>
+                  <ul class="nav nav-tabs tab-solid  tab-solid-primary" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="tab-6-1" data-toggle="tab" href="#home-6-1" role="tab" aria-controls="home-6-1" aria-selected="true"><i class="fa fa-file-text-o"></i>Project Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="tab-6-2" data-toggle="tab" href="#profile-6-2" role="tab" aria-controls="profile-6-2" aria-selected="false"><i class="fa fa-bar-chart-o"></i>WBS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="tab-6-3" data-toggle="tab" href="#contact-6-3" role="tab" aria-controls="contact-6-3" aria-selected="false"><i class="fa fa-clock-o"></i>TS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="tab-6-4" data-toggle="tab" href="#contact-6-4" role="tab" aria-controls="contact-6-4" aria-selected="false"><i class="fa fa-pencil-square-o"></i>Design</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content tab-content-solid">
+                    <div class="tab-pane fade show active" id="home-6-1" role="tabpanel" aria-labelledby="tab-6-1">
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Nama Proyek :
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" value="Pembangunan Hotel" class="form-control" id="projectname" placeholder="Enter project name">
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Owner Proyek :
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" value="PUBM Sumsel" class="form-control" id="projectowner" placeholder="Enter project owner">
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Awal Kontrak :
+                        </div>
+                        <div class="col-md-9">
+                          <div id="datepicker-popup" class="input-group date datepicker">
+                            <input type="text" value="07/12/2019" id="projectstart" class="form-control">
+                            <div class="input-group-addon input-group-text">
+                              <span class="mdi mdi-calendar"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Akhir Kontrak :
+                        </div>
+                        <div class="col-md-9">
+                          <div id="datepicker-popup2" class="input-group date datepicker">
+                            <input type="text" value="09/12/2019" id="projectend" class="form-control">
+                            <div class="input-group-addon input-group-text">
+                              <span class="mdi mdi-calendar"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Lokasi Proyek :
+                        </div>
+                        <div class="col-md-9">
+
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-9">
+                          <div class="map-container">
+                            <div id="map-with-marker" class="google-map"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <input type="text" class="form-control" id="projectlat" placeholder="Latitude">
+                            </div>
+                            <div class="col-md-6">
+                              <input type="text" class="form-control" id="projectlong" placeholder="Longitude">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="profile-6-2" role="tabpanel" aria-labelledby="tab-6-2">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#import-wbs">Import WBS</a>
+                          </p>
+                        </div>
+
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <td>No</td>
+                              <td>Item Pekerjaan</td>
+                              <td>Volume</td>
+                              <td>Satuan</td>
+                              <td>Harga</td>
+                              <td>Total</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Persiapan</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>1.1</td>
+                              <td>Pembersihan Lahan</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>1.2</td>
+                              <td>Mobilisasi</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>1.3</td>
+                              <td>Direksi Kit</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Pondasi</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>2.1</td>
+                              <td>Galian</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>2.2</td>
+                              <td>Bekisting</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="contact-6-3" role="tabpanel" aria-labelledby="tab-6-3">
+                      <div class="row">
+                        <div class="col-md-12 ">
+                          <p>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#import-ts">Import Data</a>
+                          </p>
+                          
+                          <table class="table table-hovered">
+                            <thead>
+                              <tr>
+                                <td>Item Pekerjaan</td>
+                                <td>Bobot</td>
+                                <td>Day 1</td>
+                                <td>Day 2</td>
+                                <td>Day 3</td>
+                                <td>Day 4</td>
+                                <td>Day x</td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1. Persiapan</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>1.1 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>1.2 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>1.3 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>2. Pondasi</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>2.1 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>2.2 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>2.3 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-12 text-center">
+                          <p class="mt-4 pt-4 mx-auto">
+                            There is no data<br>
+                            Input your Contract Schedule and WBS First
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="contact-6-4" role="tabpanel" aria-labelledby="tab-6-4">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#upload-design">Upload Design</a>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#create-folder">Create Folder</a>
+                          </p>
+
+                          <p class="mt-4 pt-4 mx-auto  text-center">
+                            There is no data<br>
+                            Input your Contract Schedule and WBS First
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-lg-3 grid-margin stretch-card">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="text-center">Feed Collab</h6>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input type="" name="" class="form-control" placeholder="Post Memo">
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2 mb-5 pull-right">Submit</button>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <blockquote class="blockquote blockquote-primary">
+                        <p class="text-center">
+                          <hr>
+                          <hr>
+                          <hr>
+                          <hr>
+                        </p>
+                        <footer class="blockquote-footer">Mymemo <cite title="Source Title">Ourmemo</cite></footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+       
+
+
+        <div class="modal fade" id="import-ts" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel-2">
+                  Add Time Sechedule
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+               <div class="row">
+
+                <div class="col-md-12">
+                  <div class="row grid-margin">
+                    <div class="col-12">
+                      <div id="tambahTableJs"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-success">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal fade" id="create-folder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel-2">
+                Create Folder
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="text" name="" class="form-control border-primary" placeholder="Nama Folder">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success form-control">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="modal fade" id="upload-design" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel-2">
+                Upload Design
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+
+                <div class="col-md-12">
+                  <blockquote class="blockquote blockquote-primary">
+                    <p class="text-center">
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <p class="text-center">Drag Design</p>
+                      <br>
+                      <br>
+                    </p>
+                  </blockquote>
+
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="d-lg-flex flex-row text-center text-lg-left">
+                          <img src="../images/faces/face23.jpg" class="img-lg rounded" alt="image"/>
+                          <div class="ml-lg-3">
+                            <h6>My_sketh.jpg</h6>
+                            <p class="text-muted">Sketsa Wajah Saya</p>
+                          </div>
+                        </div>
+                      </div>                    
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="d-lg-flex flex-row text-center text-lg-left">
+                          <img src="../images/faces/adobe-pdf-icon.svg" class="img-lg rounded" alt="image"/>
+                          <div class="ml-lg-3">
+                            <h6>Kontruksi_rules.pdf</h6>
+                            <p class="text-muted">Kontruksi Aturan Bangunan Barang dan Bahan Dalam dan Luar</p>
+                          </div>
+                        </div>
+                      </div>                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success">Submit</button>
+              <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- content-wrapper ends -->
+      <!-- partial:partials/_footer.html -->
+      <footer class="footer">
+        <div class="container-fluid clearfix">
+          <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2017 <a href="#">UrbanUI</a>. All rights reserved.</span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+        </div>
+      </footer>
+      <!-- partial -->
+    </div>
+    <!-- row-offcanvas ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+
+<!-- plugins:js -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+<!-- endinject -->
+<!-- Plugin js for this page-->
+<script src="../node_modules/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+<script src="../node_modules/raphael/raphael.min.js"></script>
+<script src="../node_modules/morris.js/morris.min.js"></script>
+<script src="../node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+<script src="../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- End plugin js for this page-->
+<script src="../node_modules/jsgrid/dist/jsgrid.min.js"></script>
+<!-- inject:js -->
+<script src="../js/off-canvas.js"></script>
+<script src="../js/hoverable-collapse.js"></script>
+<script src="../js/misc.js"></script>
+<script src="../js/settings.js"></script>
+<script src="../js/todolist.js"></script>
+<!-- endinject -->
+<!-- <script src="../js/js-grid.js"></script> -->
+<script src="../js/db.js"></script>
+<!-- Custom js for this page-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnT63XUjqjPgXZ0lFTU_pdpfUX7swzTTM&amp;callback=initMap"></script>
+<script src="../js/google-maps.js"></script>
+<script src="../js/formpickers.js"></script>
+<script src="../js/dashboard.js"></script>
+<!-- End custom js for this page-->
+
+<script>
+
+  var hot;
+
+  $(document).ready(function () {
+    CreateHandsonTable();
+    OnNewActivityModalLoseFocus();
+  });
+
+  function CreateHandsonTable() {
+    $('#import-wbs').on('shown.bs.modal', function (e) {
+      var data = [['No', 'Item', 'Volume', 'Satuan', 'Harga'], ['1'], ['2'], ['3'], ['4'], ['5'], ['6'], ['7'], ['8'], ['9'], ['10'],];
+      var container = document.getElementById("hot");
+      var hot = new Handsontable(container, {
+        data: data,
+        licenseKey: 'non-commercial-and-evaluation',
+        outsideClickDeselects: false,
+        width: '100%',
+      });
+      document.querySelector('#add').addEventListener('click', function() {
+        var col = hot.countRows();
+        hot.alter('insert_row', col, 1);
+        hot.setDataAtCell(col, 'No', '');
+        hot.setDataAtCell(col, 1, '');
+        hot.setDataAtCell(col, 2, '');
+        hot.setDataAtCell(col, 3, '');
+        hot.setDataAtCell(col, 4, '');
+        hot.setDataAtCell(col, 5, '');
+        hot.setDataAtCell(col, 6, '');
+        hot.setDataAtCell(col, 7, '');
+        hot.setDataAtCell(col, 8, '');
+        hot.setDataAtCell(col, 9, '');
+        hot.setDataAtCell(col, 10, '')
+      })
+    });
+    $('#import-wbs').on('hidden.bs.modal', function (e) {
+      hot.destroy();
+    });
+  }
+
+  function OnNewActivityModalLoseFocus() {
+    $(".modal").on("hide.bs.modal", function () {
+      OnCloseNewActivityBtnClick();
+    });
+  }
+
+  function OnCloseNewActivityBtnClick() {
+    var modal = $('#import-wbs');
+    var tab_content = $(modal).find('.tab-content');
+    var html = $(tab_content).html();
+    $(tab_content).html(html);
+    /* Reinitialize the newly Applied HTML */
+  }
+</script>
+
+
+<script type="text/javascript">
+
+  if($("#tambahTableJs").length) {
+    $("#tambahTableJs").jsGrid({
+      height: "500px",
+      width: "100%",
+      filtering: true,
+      editing: true,
+      inserting: true,
+      sorting: true,
+      paging: true,
+      autoload: true,
+      pageSize: 15,
+      pageButtonCount: 5,
+      deleteConfirm: "Do you really want to delete the client?",
+      data: [
+      {
+        "Item Pekerjaan": "1. Persiapan",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      },
+      {
+        "Item Pekerjaan": "1.1 ------------",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      },
+      {
+        "Item Pekerjaan": "1.2 ------------",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      },
+      {
+        "Item Pekerjaan": "1.3 ------------",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      },
+      {
+        "Item Pekerjaan": "2. Pondasi",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      },
+      {
+        "Item Pekerjaan": "2.1 ------------",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      },
+      {
+        "Item Pekerjaan": "2.2 ------------",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      },
+      {
+        "Item Pekerjaan": "2.3 ------------",
+        "Bobot": null,
+        "Day 1": null,
+        "Day 2": "",
+      }
+      ],
+      fields: [{
+        name: "Item Pekerjaan",
+        type: "text",
+        width: 150
+      },
+      {
+        name: "Bobot",
+        type: "text",
+        width: 50
+      },
+      {
+        name: "Day 1",
+        type: "text",
+        width: 50
+      },
+      {
+        name: "Day 2",
+        type: "text",
+        width: 50
+      },
+      {
+        type: "control"
+      }
+      ]
+    });
+  }
+
+
+</script>
+</body>
+</html>
