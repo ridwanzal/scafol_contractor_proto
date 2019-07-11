@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Admin Panel</title>
   <!-- plugins:css -->
+  <link rel="stylesheet" href="../libs/handsontable/dist/handsontable.full.min.css">
+  <link rel="stylesheet" type="text/css" href="https://handsontable.com/static/css/main.css">
   <link rel="stylesheet" href="../node_modules/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="../node_modules/simple-line-icons/css/simple-line-icons.css">
   <link rel="stylesheet" href="../node_modules/flag-icon-css/css/flag-icon.min.css">
@@ -14,6 +16,7 @@
   <!-- plugin css for this page -->
   <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="../node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
   <link rel="stylesheet" href="../node_modules/jsgrid/dist/jsgrid.min.css" />
   <link rel="stylesheet" href="../node_modules/jsgrid/dist/jsgrid-theme.min.css" />
 
@@ -22,6 +25,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="../images/favicon.png" />
+  <script src="../libs/handsontable/dist/handsontable.full.min.js"></script>
 </head>
 <body>
   <div class="container-scroller">
@@ -440,15 +444,178 @@
                   </ul>
                   <div class="tab-content tab-content-solid">
                     <div class="tab-pane fade show active" id="home-6-1" role="tabpanel" aria-labelledby="tab-6-1">
-                      <h5 class="mb-3">Home Content</h5>
-                      Life, green years cattle over midst that fowl moved day good have let rule. Set the. Fourth bearing days creepeth image and set. Called said image shall unto, 
-                      multiply after spirit seed living creepeth living. Don't dry cattle. Creeping green very be, creeping. I thing seasons it us midst greater. Second two you also 
-                      lesser sixth won't creeping said, creature had subdue seas him have very moveth beast seed hath spirit without every moveth darkness there our fill itself upon 
-                      there appear let days seed they're under place Male. Image to. Saw. For. Creature fill. Is fifth signs hath green.
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Nama Proyek :
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" value="Pembangunan Hotel" class="form-control" id="projectname" placeholder="Enter project name">
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Owner Proyek :
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" value="PUBM Sumsel" class="form-control" id="projectowner" placeholder="Enter project owner">
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Awal Kontrak :
+                        </div>
+                        <div class="col-md-9">
+                          <div id="datepicker-popup" class="input-group date datepicker">
+                            <input type="text" value="07/12/2019" id="projectstart" class="form-control">
+                            <div class="input-group-addon input-group-text">
+                              <span class="mdi mdi-calendar"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Akhir Kontrak :
+                        </div>
+                        <div class="col-md-9">
+                          <div id="datepicker-popup2" class="input-group date datepicker">
+                            <input type="text" value="09/12/2019" id="projectend" class="form-control">
+                            <div class="input-group-addon input-group-text">
+                              <span class="mdi mdi-calendar"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Lokasi Proyek :
+                        </div>
+                        <div class="col-md-9">
+
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-9">
+                          <div class="map-container">
+                            <div id="map-with-marker" class="google-map"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <input type="text" class="form-control" id="projectlat" placeholder="Latitude">
+                            </div>
+                            <div class="col-md-6">
+                              <input type="text" class="form-control" id="projectlong" placeholder="Longitude">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                     </div>
                     <div class="tab-pane fade" id="profile-6-2" role="tabpanel" aria-labelledby="tab-6-2">
-                      Him open blessed. Of. A stars. Seed one kind seed that there. Firmament fifth great don't said. Fourth signs seasons they're life, deep. Abundantly had forth rule years they're i
-                      mage place thing may sixth created. Moveth, gathered abundantly their thing.
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#import-wbs">Import WBS</a>
+                          </p>
+                        </div>
+
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <td>No</td>
+                              <td>Item Pekerjaan</td>
+                              <td>Volume</td>
+                              <td>Satuan</td>
+                              <td>Harga</td>
+                              <td>Total</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Persiapan</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>1.1</td>
+                              <td>Pembersihan Lahan</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>1.2</td>
+                              <td>Mobilisasi</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>1.3</td>
+                              <td>Direksi Kit</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Pondasi</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>2.1</td>
+                              <td>Galian</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>2.2</td>
+                              <td>Bekisting</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        
+                      </div>
                     </div>
                     <div class="tab-pane fade" id="contact-6-3" role="tabpanel" aria-labelledby="tab-6-3">
                       <div class="row">
@@ -603,6 +770,38 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal fade" id="import-wbs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ongoing | Completed</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="false">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    Ctrl + V (Paste)
+                  </div>
+                  <div class="col-md-6">
+                    Ctrl + C (Copy)
+                  </div>
+                </div>
+                <button type="button" id="add" class="btn btn-success">Add row</button>
+                <div id="hot"></div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
               </div>
             </div>
           </div>
@@ -767,6 +966,7 @@
 <script src="../node_modules/raphael/raphael.min.js"></script>
 <script src="../node_modules/morris.js/morris.min.js"></script>
 <script src="../node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+<script src="../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- End plugin js for this page-->
 <script src="../node_modules/jsgrid/dist/jsgrid.min.js"></script>
 <!-- inject:js -->
@@ -779,8 +979,66 @@
 <!-- <script src="../js/js-grid.js"></script>
 --><script src="../js/db.js"></script>
 <!-- Custom js for this page-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnT63XUjqjPgXZ0lFTU_pdpfUX7swzTTM&amp;callback=initMap"></script>
+<script src="../js/google-maps.js"></script>
+<script src="../js/formpickers.js"></script>
 <script src="../js/dashboard.js"></script>
 <!-- End custom js for this page-->
+
+<script>
+
+  var hot;
+
+  $(document).ready(function () {
+    CreateHandsonTable();
+    OnNewActivityModalLoseFocus();
+  });
+
+  function CreateHandsonTable() {
+    $('#import-wbs').on('shown.bs.modal', function (e) {
+      var data = [['No', 'Item', 'Volume', 'Satuan', 'Harga'], ['1'], ['2'], ['3'], ['4'], ['5'], ['6'], ['7'], ['8'], ['9'], ['10'],];
+      var container = document.getElementById("hot");
+      var hot = new Handsontable(container, {
+        data: data,
+        licenseKey: 'non-commercial-and-evaluation',
+        outsideClickDeselects: false,
+        width: '100%',
+      });
+      document.querySelector('#add').addEventListener('click', function() {
+        var col = hot.countRows();
+        hot.alter('insert_row', col, 1);
+        hot.setDataAtCell(col, 'No', '');
+        hot.setDataAtCell(col, 1, '');
+        hot.setDataAtCell(col, 2, '');
+        hot.setDataAtCell(col, 3, '');
+        hot.setDataAtCell(col, 4, '');
+        hot.setDataAtCell(col, 5, '');
+        hot.setDataAtCell(col, 6, '');
+        hot.setDataAtCell(col, 7, '');
+        hot.setDataAtCell(col, 8, '');
+        hot.setDataAtCell(col, 9, '');
+        hot.setDataAtCell(col, 10, '')
+      })
+    });
+    $('#import-wbs').on('hidden.bs.modal', function (e) {
+      hot.destroy();
+    });
+  }
+
+  function OnNewActivityModalLoseFocus() {
+    $(".modal").on("hide.bs.modal", function () {
+      OnCloseNewActivityBtnClick();
+    });
+  }
+
+  function OnCloseNewActivityBtnClick() {
+    var modal = $('#import-wbs');
+    var tab_content = $(modal).find('.tab-content');
+    var html = $(tab_content).html();
+    $(tab_content).html(html);
+    /* Reinitialize the newly Applied HTML */
+  }
+</script>
 
 
 <script type="text/javascript">
