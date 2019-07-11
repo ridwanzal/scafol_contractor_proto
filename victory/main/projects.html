@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.urbanui.com/victory/pages/ui-features/modals.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Nov 2018 06:57:48 GMT -->
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Victory Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../node_modules/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../node_modules/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../node_modules/flag-icon-css/css/flag-icon.min.css">
+  <link rel="stylesheet" href="../node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../libs/dropzone/dist/dropzone.css">
+  <link rel="stylesheet" href="../libs/leaflet/leaflet.css">
+  <link rel="stylesheet" href="../node_modules/dropify/dist/css/dropify.min.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+        <a class="navbar-brand brand-logo" href="../index.html"><img src="../images/auth/logo_main2.svg"
+            alt="logo" /></a>
+        <a class="navbar-brand brand-logo-mini" href="../index.html"><img src="../images/auth/logo-mini.svg"
+            alt="logo" /></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown d-none d-lg-flex">
+            <!-- <a class="nav-link dropdown-toggle nav-btn" id="actionDropdown" href="#" data-toggle="dropdown">
+              <span class="btn">+ Add new Project</span>
+            </a> -->
+            <a class="nav-link dropdown-toggle nav-btn" data-toggle="modal" data-target="#modalProjects">
+              <span class="btn">+ Add new Project</span>
+            </a>
+            <div class="dropdown-menu navbar-dropdown dropdown-left" aria-labelledby="actionDropdown">
+              <button class="dropdown-item" data-toggle="modal" data-target="#modalProjects">
+                <i class="icon-user text-primary"></i>
+                Add Projects
+              </button>
+              <!-- <div class="dropdown-divider"></div>
+              <button class="dropdown-item" data-toggle="modal" data-target="#modalTeams">
+                <i class="icon-user-following text-warning"></i>
+                Add Teams
+              </button> -->
+          </li>
+        </ul>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <!-- partial:../../partials/_settings-panel.html -->
+        <!-- partial -->
+        <!-- partial:../../partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">
+                <i class="icon-rocket menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">
+                <i class="icon-shield menu-icon"></i>
+                <span class="menu-title">Projects</span>
+
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="setting.html">
+                <i class="icon-settings menu-icon"></i>
+                <span class="menu-title">Settings</span>
+              </a>
+            </li>
+        </nav>
+        <!-- partial -->
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-1" style="display: flex;">
+                      <h3 class="card-title">Project List</h3>&nbsp;&nbsp;
+                      <div class=>
+                        <h3 class="mb-0" style="color:#ccc; !important">(12 Ongoing | Finish)</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Tol Lampung Sumatera</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                      <a href="detail_proyek.html"><button style="margin-top:10px;" type="button"
+                          class="btn btn-primary btn-small">Show
+                          Details</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Gedung Serbaguna Kecamatan 12 Ilir</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                      <a href="detail_proyek.html"><button style="margin-top:10px;" type="button"
+                          class="btn btn-primary btn-small">Show
+                          Details</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Pengembangan Jalan dan Jembatan Kabupaten MURA</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                      <a href="detail_proyek.html"><button style="margin-top:10px;" type="button"
+                          class="btn btn-primary btn-small">Show
+                          Details</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Pembangunan Rumah Susun</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                      <a href="detail_proyek.html"><button style="margin-top:10px;" type="button"
+                          class="btn btn-primary btn-small">Show
+                          Details</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Pemeliharaan Jalan Jalan Betung Raya</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : PT. Mura Jalan</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                      <a href="detail_proyek.html"><button style="margin-top:10px;" type="button"
+                          class="btn btn-primary btn-small">Show
+                          Details</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Pengembangan Waduk</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                      <a href="detail_proyek.html"><button style="margin-top:10px;" type="button"
+                          class="btn btn-primary btn-small">Show
+                          Details</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Tol Lampung Sumatera</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                      <a href="detail_proyek.html"><button style="margin-top:10px;" type="button"
+                          class="btn btn-primary btn-small">Show
+                          Details</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Tol Lampung Sumatera</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                      <a href="detail_proyek.html"><button style="margin-top:10px;" type="button"
+                          class="btn btn-primary btn-small">Show
+                          Details</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Tol Lampung Sumatera</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                      <a href="detail_proyek.html"><button style="margin-top:10px;" type="button"
+                          class="btn btn-primary btn-small">Show
+                          Details</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Tol Lampung Sumatera</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                      <a href="detail_proyek.html"><button style="margin-top:10px;" type="button"
+                          class="btn btn-primary btn-small">Show
+                          Details</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Tol Lampung Sumatera</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                      <a href="detail_proyek.html"><button style="margin-top:10px;" type="button"
+                          class="btn btn-primary btn-small">Show
+                          Details</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Tol Lampung Sumatera</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                      <a href="detail_proyek.html"><button style="margin-top:10px;" type="button"
+                          class="btn btn-primary btn-small">Show
+                          Details</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Modal starts -->
+            <div class="modal fade" id="modalProjects" tabindex="-1" role="dialog" aria-labelledby="modalProjectsLabel"
+              aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel-2">Add Projects</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group row">
+                        <div class="col">
+                          <label for="project-name" class="col-form-label">Project Name</label>
+                          <input placeholder="Please Input Project Name" type="text" class="form-control"
+                            id="project-name" name="project_name">
+                        </div>
+                        <div class="col">
+                          <label for="client-name" class="col-form-label">Client Name</label>
+                          <input placeholder="Please Input Client Name" type="text" class="form-control"
+                            id="client-name" name="client_name">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col">
+                          <label for="contract-date" class="col-form-label">Contract Date</label>
+                          <input type="date" class="form-control" id="contract-date" name="contract_date">
+                        </div>
+                        <div class="col">
+                          <label for="categories" class="col-form-label">Categories</label>
+                          <select name="categories" id="categories" class="form-control">
+                            <option value="Electric">Electric</option>
+                            <option value="tol">Tol</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="map-container">
+                        <div id="map-with-marker" class="google-map"></div>
+                      </div>
+                      <!-- <div class="form-group">
+                        <input type="file" class="dropify" data-max-file-size="30kb" />
+                      </div> -->
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success">Submit</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal Ends -->
+
+            <!-- Modal starts -->
+            <div class="modal fade" id="modalTeams" tabindex="-1" role="dialog" aria-labelledby="modalProjectsLabel"
+              aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel-2">Add Teams</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Email:</label>
+                        <input type="text" class="form-control" id="recipient-name"
+                          placeholder="Please Input Your Email">
+                      </div>
+                      <div class="form-group">
+                        <!-- <textarea class="form-control" id="message-text"></textarea> -->
+                        <div class="form-group">
+                          <label for="exampleSelectPrimary">Select Project</label>
+                          <select class="form-control border-primary" id="exampleSelectPrimary">
+                            <option value="0">Please Select Project</option>
+                            <option>Proyek Tol Lampung Sumatera1</option>
+                            <option>Proyek Gedung Serbaguna Kecamatan 12 Ilir</option>
+                            <option>Proyek Pengembangan Jalan Dan Jembatan Kabupaten MURA</option>
+                          </select>
+                        </div>
+                        <label class="col-form-label">Add Members</label>
+                        <div class="card card-inverse-secondary">
+                          <div class="card-body" style="background: #fff;">
+                            <div class="row">
+                              <div class="col-md-12 col-lg-12">
+                                <input type="text" class="form-control" placeholder="Please Input Your Name"
+                                  id="recipient-name">
+                              </div>
+                              <div class="col-md-12 col-lg-12">
+                                <div style="display:flex;">
+                                  <div class="form-check form-check-flat">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input">
+                                      Engineering
+                                    </label>
+                                  </div>
+                                  &nbsp;&nbsp;&nbsp;
+                                  <div class="form-check form-check-flat">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input">
+                                      Procurement
+                                    </label>
+                                  </div>
+                                  &nbsp;&nbsp;&nbsp;
+                                  <div class="form-check form-check-flat">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input">
+                                      Construction
+                                    </label>
+                                  </div>
+                                </div>
+                                <div style="display:flex;">
+                                  <div class="form-check form-check-flat">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input">
+                                      Finance
+                                    </label>
+                                  </div>
+                                  &nbsp;&nbsp;&nbsp;
+                                  <div class="form-check form-check-flat">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input">
+                                      HSE
+                                    </label>
+                                  </div>
+                                </div>
+                                <button style="margin-top:10px;" type="button" class="btn btn-primary btn-small">Add
+                                  Team
+                                  Member</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success">Submit</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal Ends -->
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+            <footer class="footer">
+              <div class="container-fluid clearfix">
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2017 <a
+                    href="#">UrbanUI</a>. All rights reserved.</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
+                    class="mdi mdi-heart text-danger"></i></span>
+              </div>
+            </footer>
+            <!-- partial -->
+          </div>
+          <!-- row-offcanvas ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+      </div>
+      <!-- row-offcanvas ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="../js/off-canvas.js"></script>
+  <script src="../js/hoverable-collapse.js"></script>
+  <script src="../js/misc.js"></script>
+  <script src="../js/settings.js"></script>
+  <script src="../js/todolist.js"></script>
+  <script src="../node_modules/dropify/dist/js/dropify.min.js"></script>
+  <script src="../js/dropify.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../js/modal-demo.js"></script>
+  <script src="../libs/dropzone/dist/dropzone.js"></script>
+  <script src="../libs/leaflet/leaflet.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnT63XUjqjPgXZ0lFTU_pdpfUX7swzTTM&amp;callback=initMap"></script>
+  <script src="../js/google-maps.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+
+<!-- Mirrored from www.urbanui.com/victory/pages/ui-features/modals.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Nov 2018 06:57:49 GMT -->
+
+</html>
