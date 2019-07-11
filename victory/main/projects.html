@@ -31,7 +31,8 @@
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="../index.html"><img src="../images/logo.svg" alt="logo" /></a>
+        <a class="navbar-brand brand-logo" href="../index.html"><img src="../images/auth/logo_main2.svg"
+            alt="logo" /></a>
         <a class="navbar-brand brand-logo-mini" href="../index.html"><img src="../images/logo-mini.svg"
             alt="logo" /></a>
       </div>
@@ -41,19 +42,22 @@
         </button>
         <ul class="navbar-nav">
           <li class="nav-item dropdown d-none d-lg-flex">
-            <a class="nav-link dropdown-toggle nav-btn" id="actionDropdown" href="#" data-toggle="dropdown">
-              <span class="btn">+ Add new</span>
+            <!-- <a class="nav-link dropdown-toggle nav-btn" id="actionDropdown" href="#" data-toggle="dropdown">
+              <span class="btn">+ Add new Project</span>
+            </a> -->
+            <a class="nav-link dropdown-toggle nav-btn" data-toggle="modal" data-target="#modalProjects">
+              <span class="btn">+ Add new Project</span>
             </a>
             <div class="dropdown-menu navbar-dropdown dropdown-left" aria-labelledby="actionDropdown">
               <button class="dropdown-item" data-toggle="modal" data-target="#modalProjects">
                 <i class="icon-user text-primary"></i>
                 Add Projects
               </button>
-              <div class="dropdown-divider"></div>
+              <!-- <div class="dropdown-divider"></div>
               <button class="dropdown-item" data-toggle="modal" data-target="#modalTeams">
                 <i class="icon-user-following text-warning"></i>
                 Add Teams
-              </button>
+              </button> -->
           </li>
         </ul>
     </nav>
@@ -65,23 +69,6 @@
         <!-- partial:../../partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <ul class="nav">
-            <li class="nav-item nav-profile">
-              <div class="nav-link">
-                <div class="profile-image">
-                  <img src="../images/faces/face10.jpg" alt="image" />
-                  <span class="online-status online"></span>
-                  <!--change class online to offline or busy as needed-->
-                </div>
-                <div class="profile-name">
-                  <p class="name">
-                    Marina Michel
-                  </p>
-                  <p class="designation">
-                    Super Admin
-                  </p>
-                </div>
-              </div>
-            </li>
             <li class="nav-item">
               <a class="nav-link" href="dashboard.html">
                 <i class="icon-rocket menu-icon"></i>
@@ -358,11 +345,13 @@
                       <div class="form-group row">
                         <div class="col">
                           <label for="project-name" class="col-form-label">Project Name</label>
-                          <input type="text" class="form-control" id="project-name" name="project_name">
+                          <input placeholder="Please Input Project Name" type="text" class="form-control"
+                            id="project-name" name="project_name">
                         </div>
                         <div class="col">
                           <label for="client-name" class="col-form-label">Client Name</label>
-                          <input type="text" class="form-control" id="client-name" name="client_name">
+                          <input placeholder="Please Input Client Name" type="text" class="form-control"
+                            id="client-name" name="client_name">
                         </div>
                       </div>
                       <div class="form-group row">
@@ -378,18 +367,18 @@
                           </select>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <div class="map-container">
-                          <div id="map-with-marker" class="google-map"></div>
-                        </div>
+                      <div class="map-container">
+                        <div id="map-with-marker" class="google-map"></div>
                       </div>
                       <!-- <div class="form-group">
                         <input type="file" class="dropify" data-max-file-size="30kb" />
                       </div> -->
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> a07e161a04214c11d089c1ccbe08086e5f03f1e3
                     </form>
-
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-success">Submit</button>

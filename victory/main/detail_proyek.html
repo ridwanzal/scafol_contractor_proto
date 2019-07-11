@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Admin Panel</title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="../libs/handsontable/dist/handsontable.full.min.css">
-  <link rel="stylesheet" type="text/css" href="https://handsontable.com/static/css/main.css">
   <link rel="stylesheet" href="../node_modules/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="../node_modules/simple-line-icons/css/simple-line-icons.css">
   <link rel="stylesheet" href="../node_modules/flag-icon-css/css/flag-icon.min.css">
@@ -16,7 +15,6 @@
   <!-- plugin css for this page -->
   <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="../node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css">
-  <link rel="stylesheet" href="../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
   <link rel="stylesheet" href="../node_modules/jsgrid/dist/jsgrid.min.css" />
   <link rel="stylesheet" href="../node_modules/jsgrid/dist/jsgrid-theme.min.css" />
 
@@ -25,15 +23,15 @@
   <link rel="stylesheet" href="../css/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="../images/favicon.png" />
-  <script src="../libs/handsontable/dist/handsontable.full.min.js"></script>
 </head>
+
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html"><img src="../images/logo.svg" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../images/logo-mini.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo" href="index.html"><img src="../images/logo.svg" alt="logo" /></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../images/logo-mini.svg" alt="logo" /></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -91,11 +89,13 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+              data-toggle="dropdown">
               <i class="icon-bell mx-0"></i>
               <span class="count"></span>
             </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+              aria-labelledby="notificationDropdown">
               <a class="dropdown-item">
                 <p class="mb-0 font-weight-normal float-left">You have 4 new notifications
                 </p>
@@ -146,11 +146,13 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown"
+              aria-expanded="false">
               <i class="icon-envelope mx-0"></i>
               <span class="count"></span>
             </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+              aria-labelledby="messageDropdown">
               <div class="dropdown-item">
                 <p class="mb-0 font-weight-normal float-left">You have 7 unread mails
                 </p>
@@ -206,7 +208,8 @@
             </a>
           </li>
         </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+          data-toggle="offcanvas">
           <span class="icon-menu"></span>
         </button>
       </div>
@@ -220,8 +223,12 @@
           <div id="theme-settings" class="settings-panel">
             <i class="settings-close mdi mdi-close"></i>
             <p class="settings-heading">SIDEBAR SKINS</p>
-            <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
-            <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+            <div class="sidebar-bg-options selected" id="sidebar-light-theme">
+              <div class="img-ss rounded-circle bg-light border mr-3"></div>Light
+            </div>
+            <div class="sidebar-bg-options" id="sidebar-dark-theme">
+              <div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark
+            </div>
             <p class="settings-heading mt-2">HEADER SKINS</p>
             <div class="color-tiles mx-0 px-4">
               <div class="tiles primary"></div>
@@ -239,14 +246,17 @@
           <i class="settings-close mdi mdi-close"></i>
           <ul class="nav nav-tabs" id="setting-panel" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+              <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab"
+                aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+              <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab"
+                aria-controls="chats-section">CHATS</a>
             </li>
           </ul>
           <div class="tab-content" id="setting-content">
-            <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel"
+              aria-labelledby="todo-section">
               <div class="add-items d-flex px-3 mb-0">
                 <form class="form w-100">
                   <div class="form-group d-flex">
@@ -325,11 +335,13 @@
             <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
               <div class="d-flex align-items-center justify-content-between border-bottom">
                 <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
-                <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+                <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See
+                  All</small>
               </div>
               <ul class="chat-list">
                 <li class="list active">
-                  <div class="profile"><img src="../images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="../images/faces/face1.jpg" alt="image"><span class="online"></span>
+                  </div>
                   <div class="info">
                     <p>Thomas Douglas</p>
                     <p>Available</p>
@@ -337,7 +349,8 @@
                   <small class="text-muted my-auto">19 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="../images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                  <div class="profile"><img src="../images/faces/face2.jpg" alt="image"><span class="offline"></span>
+                  </div>
                   <div class="info">
                     <div class="wrapper d-flex">
                       <p>Catherine</p>
@@ -348,7 +361,8 @@
                   <small class="text-muted my-auto">23 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="../images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="../images/faces/face3.jpg" alt="image"><span class="online"></span>
+                  </div>
                   <div class="info">
                     <p>Daniel Russell</p>
                     <p>Available</p>
@@ -356,7 +370,8 @@
                   <small class="text-muted my-auto">14 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="../images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                  <div class="profile"><img src="../images/faces/face4.jpg" alt="image"><span class="offline"></span>
+                  </div>
                   <div class="info">
                     <p>James Richardson</p>
                     <p>Away</p>
@@ -364,7 +379,8 @@
                   <small class="text-muted my-auto">2 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="../images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="../images/faces/face5.jpg" alt="image"><span class="online"></span>
+                  </div>
                   <div class="info">
                     <p>Madeline Kennedy</p>
                     <p>Available</p>
@@ -372,7 +388,8 @@
                   <small class="text-muted my-auto">5 min</small>
                 </li>
                 <li class="list">
-                  <div class="profile"><img src="../images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                  <div class="profile"><img src="../images/faces/face6.jpg" alt="image"><span class="online"></span>
+                  </div>
                   <div class="info">
                     <p>Sarah Graves</p>
                     <p>Available</p>
@@ -391,8 +408,9 @@
             <li class="nav-item nav-profile">
               <div class="nav-link">
                 <div class="profile-image">
-                  <img src="../images/faces/face10.jpg" alt="image"/>
-                  <span class="online-status online"></span> <!--change class online to offline or busy as needed-->
+                  <img src="../images/faces/face10.jpg" alt="image" />
+                  <span class="online-status online"></span>
+                  <!--change class online to offline or busy as needed-->
                 </div>
                 <div class="profile-name">
                   <p class="name">
@@ -430,7 +448,9 @@
                   <h4 class="card-title">Ongoing | Completed</h4>
                   <ul class="nav nav-tabs tab-solid  tab-solid-primary" role="tablist">
                     <li class="nav-item">
-                      <a class="nav-link active" id="tab-6-1" data-toggle="tab" href="#home-6-1" role="tab" aria-controls="home-6-1" aria-selected="true"><i class="fa fa-file-text-o"></i>Project Profile</a>
+                      <a class="nav-link active" id="tab-6-1" data-toggle="tab" href="#home-6-1" role="tab"
+                        aria-controls="home-6-1" aria-selected="true"><i class="fa fa-file-text-o"></i>Project
+                        Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="tab-6-5" data-toggle="tab" href="#people-6-5" role="tab" aria-controls="people-6-5" aria-selected="false"><i class="fa fa-users"></i>Team Member</a>
@@ -439,197 +459,43 @@
                       <a class="nav-link" id="tab-6-2" data-toggle="tab" href="#profile-6-2" role="tab" aria-controls="profile-6-2" aria-selected="false"><i class="fa fa-bar-chart-o"></i>WBS</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="tab-6-3" data-toggle="tab" href="#contact-6-3" role="tab" aria-controls="contact-6-3" aria-selected="false"><i class="fa fa-clock-o"></i>TS</a>
+                      <a class="nav-link" id="tab-6-3" data-toggle="tab" href="#contact-6-3" role="tab"
+                        aria-controls="contact-6-3" aria-selected="false"><i class="fa fa-clock-o"></i>TS</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="tab-6-4" data-toggle="tab" href="#contact-6-4" role="tab" aria-controls="contact-6-4" aria-selected="false"><i class="fa fa-pencil-square-o"></i>Design</a>
+                      <a class="nav-link" id="tab-6-4" data-toggle="tab" href="#contact-6-4" role="tab"
+                        aria-controls="contact-6-4" aria-selected="false"><i
+                          class="fa fa-pencil-square-o"></i>Design</a>
                     </li>
                   </ul>
                   <div class="tab-content tab-content-solid">
                     <div class="tab-pane fade show active" id="home-6-1" role="tabpanel" aria-labelledby="tab-6-1">
-
-                      <div class="row">
-                        <div class="col-md-3">
-                          Nama Proyek :
-                        </div>
-                        <div class="col-md-9">
-                          <input type="text" value="Pembangunan Hotel" class="form-control" id="projectname" placeholder="Enter project name">
-                        </div>
-                      </div>
-
-                      <br>
-
-                      <div class="row">
-                        <div class="col-md-3">
-                          Owner Proyek :
-                        </div>
-                        <div class="col-md-9">
-                          <input type="text" value="PUBM Sumsel" class="form-control" id="projectowner" placeholder="Enter project owner">
-                        </div>
-                      </div>
-
-                      <br>
-
-                      <div class="row">
-                        <div class="col-md-3">
-                          Awal Kontrak :
-                        </div>
-                        <div class="col-md-9">
-                          <div id="datepicker-popup" class="input-group date datepicker">
-                            <input type="text" value="07/12/2019" id="projectstart" class="form-control">
-                            <div class="input-group-addon input-group-text">
-                              <span class="mdi mdi-calendar"></span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <br>
-
-                      <div class="row">
-                        <div class="col-md-3">
-                          Akhir Kontrak :
-                        </div>
-                        <div class="col-md-9">
-                          <div id="datepicker-popup2" class="input-group date datepicker">
-                            <input type="text" value="09/12/2019" id="projectend" class="form-control">
-                            <div class="input-group-addon input-group-text">
-                              <span class="mdi mdi-calendar"></span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <br>
-
-                      <div class="row">
-                        <div class="col-md-3">
-                          Lokasi Proyek :
-                        </div>
-                        <div class="col-md-9">
-
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-3">
-
-                        </div>
-                        <div class="col-md-9">
-                          <div class="map-container">
-                            <div id="map-with-marker" class="google-map"></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-3">
-
-                        </div>
-                        <div class="col-md-9">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <input type="text" class="form-control" id="projectlat" placeholder="Latitude">
-                            </div>
-                            <div class="col-md-6">
-                              <input type="text" class="form-control" id="projectlong" placeholder="Longitude">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
+                      <h5 class="mb-3">Home Content</h5>
+                      Life, green years cattle over midst that fowl moved day good have let rule. Set the. Fourth
+                      bearing days creepeth image and set. Called said image shall unto,
+                      multiply after spirit seed living creepeth living. Don't dry cattle. Creeping green very be,
+                      creeping. I thing seasons it us midst greater. Second two you also
+                      lesser sixth won't creeping said, creature had subdue seas him have very moveth beast seed hath
+                      spirit without every moveth darkness there our fill itself upon
+                      there appear let days seed they're under place Male. Image to. Saw. For. Creature fill. Is fifth
+                      signs hath green.
                     </div>
                     <div class="tab-pane fade" id="people-6-5" role="tabpanel" aria-labelledby="tab-6-5">
 
                     </div>
                     <div class="tab-pane fade" id="profile-6-2" role="tabpanel" aria-labelledby="tab-6-2">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <p>
-                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#import-wbs">Import WBS</a>
-                          </p>
-                        </div>
-
-                        <table class="table table-bordered">
-                          <thead>
-                            <tr>
-                              <td>No</td>
-                              <td>Item Pekerjaan</td>
-                              <td>Volume</td>
-                              <td>Satuan</td>
-                              <td>Harga</td>
-                              <td>Total</td>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>1</td>
-                              <td>Persiapan</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>1.1</td>
-                              <td>Pembersihan Lahan</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>1.2</td>
-                              <td>Mobilisasi</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>1.3</td>
-                              <td>Direksi Kit</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>Pondasi</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>2.1</td>
-                              <td>Galian</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>2.2</td>
-                              <td>Bekisting</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        
-                      </div>
+                      Him open blessed. Of. A stars. Seed one kind seed that there. Firmament fifth great don't said.
+                      Fourth signs seasons they're life, deep. Abundantly had forth rule years they're i
+                      mage place thing may sixth created. Moveth, gathered abundantly their thing.
                     </div>
                     <div class="tab-pane fade" id="contact-6-3" role="tabpanel" aria-labelledby="tab-6-3">
                       <div class="row">
                         <div class="col-md-12 ">
                           <p>
-                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#import-ts">Import Data</a>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#import-ts">Import
+                              Data</a>
                           </p>
-                          
+
                           <table class="table table-hovered">
                             <thead>
                               <tr>
@@ -733,8 +599,10 @@
                       <div class="row">
                         <div class="col-md-12">
                           <p>
-                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#upload-design">Upload Design</a>
-                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#create-folder">Create Folder</a>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#upload-design">Upload
+                              Design</a>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#create-folder">Create
+                              Folder</a>
                           </p>
 
                           <p class="mt-4 pt-4 mx-auto  text-center">
@@ -782,39 +650,8 @@
         </div>
 
 
-        <div class="modal fade" id="import-wbs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ongoing | Completed</h5>
-
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="false">&times;</span>
-                </button>
-              </div>
-
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-6">
-                    Ctrl + V (Paste)
-                  </div>
-                  <div class="col-md-6">
-                    Ctrl + C (Copy)
-                  </div>
-                </div>
-                <button type="button" id="add" class="btn btn-success">Add row</button>
-                <div id="hot"></div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-success">Submit</button>
-                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="modal fade" id="import-ts" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
+        <div class="modal fade" id="import-ts" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2"
+          aria-hidden="true">
           <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -826,320 +663,267 @@
                 </button>
               </div>
               <div class="modal-body">
-               <div class="row">
-
-                <div class="col-md-12">
-                  <div class="row grid-margin">
-                    <div class="col-12">
-                      <div id="tambahTableJs"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-success">Submit</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="modal fade" id="create-folder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel-2">
-                Create Folder
-              </h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input type="text" name="" class="form-control border-primary" placeholder="Nama Folder">
-                  </div>
-                </div>
-
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-success form-control">Submit</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <div class="modal fade" id="upload-design" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel-2">
-                Upload Design
-              </h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-
-                <div class="col-md-12">
-                  <blockquote class="blockquote blockquote-primary">
-                    <p class="text-center">
-                      <br>
-                      <br>
-                      <br>
-                      <br>
-                      <p class="text-center">Drag Design</p>
-                      <br>
-                      <br>
-                    </p>
-                  </blockquote>
+                <div class="row">
 
                   <div class="col-md-12">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="d-lg-flex flex-row text-center text-lg-left">
-                          <img src="../images/faces/face23.jpg" class="img-lg rounded" alt="image"/>
-                          <div class="ml-lg-3">
-                            <h6>My_sketh.jpg</h6>
-                            <p class="text-muted">Sketsa Wajah Saya</p>
-                          </div>
-                        </div>
-                      </div>                    
-                    </div>
-                    <br>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="d-lg-flex flex-row text-center text-lg-left">
-                          <img src="../images/faces/adobe-pdf-icon.svg" class="img-lg rounded" alt="image"/>
-                          <div class="ml-lg-3">
-                            <h6>Kontruksi_rules.pdf</h6>
-                            <p class="text-muted">Kontruksi Aturan Bangunan Barang dan Bahan Dalam dan Luar</p>
-                          </div>
-                        </div>
-                      </div>                    
+                    <div class="row grid-margin">
+                      <div class="col-12">
+                        <div id="tambahTableJs"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-success">Submit</button>
-              <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Submit</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
 
 
-      <!-- content-wrapper ends -->
-      <!-- partial:partials/_footer.html -->
-      <footer class="footer">
-        <div class="container-fluid clearfix">
-          <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2017 <a href="#">UrbanUI</a>. All rights reserved.</span>
-          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+        <div class="modal fade" id="create-folder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel-2">
+                  Create Folder
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="text" name="" class="form-control border-primary" placeholder="Nama Folder">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success form-control">Submit</button>
+              </div>
+            </div>
+          </div>
         </div>
-      </footer>
-      <!-- partial -->
+
+
+
+
+        <div class="modal fade" id="upload-design" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel-2">
+                  Upload Design
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+
+                  <div class="col-md-12">
+                    <blockquote class="blockquote blockquote-primary">
+                      <p class="text-center">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <p class="text-center">Drag Document</p>
+                        <br>
+                        <br>
+                      </p>
+                    </blockquote>
+
+                    <div class="col-md-12">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="d-lg-flex flex-row text-center text-lg-left">
+                            <img src="../images/faces/face23.jpg" class="img-lg rounded" alt="image" />
+                            <div class="ml-lg-3">
+                              <h6>My_sketh.jpg</h6>
+                              <p class="text-muted">Sketsa Wajah Saya</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="d-lg-flex flex-row text-center text-lg-left">
+                            <img src="../images/faces/adobe-pdf-icon.svg" class="img-lg rounded" alt="image" />
+                            <div class="ml-lg-3">
+                              <h6>Kontruksi_rules.pdf</h6>
+                              <p class="text-muted">Kontruksi Aturan Bangunan Barang dan Bahan Dalam dan Luar</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="container-fluid clearfix">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2017 <a
+                href="#">UrbanUI</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
+                class="mdi mdi-heart text-danger"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- row-offcanvas ends -->
     </div>
-    <!-- row-offcanvas ends -->
+    <!-- page-body-wrapper ends -->
   </div>
-  <!-- page-body-wrapper ends -->
-</div>
-<!-- container-scroller -->
+  <!-- container-scroller -->
 
-<!-- plugins:js -->
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
-<!-- endinject -->
-<!-- Plugin js for this page-->
-<script src="../node_modules/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
-<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
-<script src="../node_modules/raphael/raphael.min.js"></script>
-<script src="../node_modules/morris.js/morris.min.js"></script>
-<script src="../node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
-<script src="../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- End plugin js for this page-->
-<script src="../node_modules/jsgrid/dist/jsgrid.min.js"></script>
-<!-- inject:js -->
-<script src="../js/off-canvas.js"></script>
-<script src="../js/hoverable-collapse.js"></script>
-<script src="../js/misc.js"></script>
-<script src="../js/settings.js"></script>
-<script src="../js/todolist.js"></script>
-<!-- endinject -->
-<!-- <script src="../js/js-grid.js"></script> -->
-<script src="../js/db.js"></script>
-<!-- Custom js for this page-->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnT63XUjqjPgXZ0lFTU_pdpfUX7swzTTM&amp;callback=initMap"></script>
-<script src="../js/google-maps.js"></script>
-<script src="../js/formpickers.js"></script>
-<script src="../js/dashboard.js"></script>
-<!-- End custom js for this page-->
+  <!-- plugins:js -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="../node_modules/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+  <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+  <script src="../node_modules/raphael/raphael.min.js"></script>
+  <script src="../node_modules/morris.js/morris.min.js"></script>
+  <script src="../node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+  <!-- End plugin js for this page-->
+  <script src="../node_modules/jsgrid/dist/jsgrid.min.js"></script>
+  <!-- inject:js -->
+  <script src="../js/off-canvas.js"></script>
+  <script src="../js/hoverable-collapse.js"></script>
+  <script src="../js/misc.js"></script>
+  <script src="../js/settings.js"></script>
+  <script src="../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- <script src="../js/js-grid.js"></script>
+-->
+  <script src="../js/db.js"></script>
+  <!-- Custom js for this page-->
+  <script src="../js/dashboard.js"></script>
+  <!-- End custom js for this page-->
 
-<script>
 
-  var hot;
+  <script type="text/javascript">
 
-  $(document).ready(function () {
-    CreateHandsonTable();
-    OnNewActivityModalLoseFocus();
-  });
-
-  function CreateHandsonTable() {
-    $('#import-wbs').on('shown.bs.modal', function (e) {
-      var data = [['No', 'Item', 'Volume', 'Satuan', 'Harga'], ['1'], ['2'], ['3'], ['4'], ['5'], ['6'], ['7'], ['8'], ['9'], ['10'],];
-      var container = document.getElementById("hot");
-      var hot = new Handsontable(container, {
-        data: data,
-        licenseKey: 'non-commercial-and-evaluation',
-        outsideClickDeselects: false,
-        width: '100%',
+    if ($("#tambahTableJs").length) {
+      $("#tambahTableJs").jsGrid({
+        height: "500px",
+        width: "100%",
+        filtering: true,
+        editing: true,
+        inserting: true,
+        sorting: true,
+        paging: true,
+        autoload: true,
+        pageSize: 15,
+        pageButtonCount: 5,
+        deleteConfirm: "Do you really want to delete the client?",
+        data: [
+          {
+            "Item Pekerjaan": "1. Persiapan",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          },
+          {
+            "Item Pekerjaan": "1.1 ------------",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          },
+          {
+            "Item Pekerjaan": "1.2 ------------",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          },
+          {
+            "Item Pekerjaan": "1.3 ------------",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          },
+          {
+            "Item Pekerjaan": "2. Pondasi",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          },
+          {
+            "Item Pekerjaan": "2.1 ------------",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          },
+          {
+            "Item Pekerjaan": "2.2 ------------",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          },
+          {
+            "Item Pekerjaan": "2.3 ------------",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          }
+        ],
+        fields: [{
+          name: "Item Pekerjaan",
+          type: "text",
+          width: 150
+        },
+        {
+          name: "Bobot",
+          type: "text",
+          width: 50
+        },
+        {
+          name: "Day 1",
+          type: "text",
+          width: 50
+        },
+        {
+          name: "Day 2",
+          type: "text",
+          width: 50
+        },
+        {
+          type: "control"
+        }
+        ]
       });
-      document.querySelector('#add').addEventListener('click', function() {
-        var col = hot.countRows();
-        hot.alter('insert_row', col, 1);
-        hot.setDataAtCell(col, 'No', '');
-        hot.setDataAtCell(col, 1, '');
-        hot.setDataAtCell(col, 2, '');
-        hot.setDataAtCell(col, 3, '');
-        hot.setDataAtCell(col, 4, '');
-        hot.setDataAtCell(col, 5, '');
-        hot.setDataAtCell(col, 6, '');
-        hot.setDataAtCell(col, 7, '');
-        hot.setDataAtCell(col, 8, '');
-        hot.setDataAtCell(col, 9, '');
-        hot.setDataAtCell(col, 10, '')
-      })
-    });
-    $('#import-wbs').on('hidden.bs.modal', function (e) {
-      hot.destroy();
-    });
-  }
-
-  function OnNewActivityModalLoseFocus() {
-    $(".modal").on("hide.bs.modal", function () {
-      OnCloseNewActivityBtnClick();
-    });
-  }
-
-  function OnCloseNewActivityBtnClick() {
-    var modal = $('#import-wbs');
-    var tab_content = $(modal).find('.tab-content');
-    var html = $(tab_content).html();
-    $(tab_content).html(html);
-    /* Reinitialize the newly Applied HTML */
-  }
-</script>
+    }
 
 
-<script type="text/javascript">
-
-  if($("#tambahTableJs").length) {
-    $("#tambahTableJs").jsGrid({
-      height: "500px",
-      width: "100%",
-      filtering: true,
-      editing: true,
-      inserting: true,
-      sorting: true,
-      paging: true,
-      autoload: true,
-      pageSize: 15,
-      pageButtonCount: 5,
-      deleteConfirm: "Do you really want to delete the client?",
-      data: [
-      {
-        "Item Pekerjaan": "1. Persiapan",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      },
-      {
-        "Item Pekerjaan": "1.1 ------------",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      },
-      {
-        "Item Pekerjaan": "1.2 ------------",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      },
-      {
-        "Item Pekerjaan": "1.3 ------------",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      },
-      {
-        "Item Pekerjaan": "2. Pondasi",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      },
-      {
-        "Item Pekerjaan": "2.1 ------------",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      },
-      {
-        "Item Pekerjaan": "2.2 ------------",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      },
-      {
-        "Item Pekerjaan": "2.3 ------------",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      }
-      ],
-      fields: [{
-        name: "Item Pekerjaan",
-        type: "text",
-        width: 150
-      },
-      {
-        name: "Bobot",
-        type: "text",
-        width: 50
-      },
-      {
-        name: "Day 1",
-        type: "text",
-        width: 50
-      },
-      {
-        name: "Day 2",
-        type: "text",
-        width: 50
-      },
-      {
-        type: "control"
-      }
-      ]
-    });
-  }
-
-
-</script>
+  </script>
 </body>
+
 </html>
