@@ -3,6 +3,7 @@
 
 
 <!-- Mirrored from www.urbanui.com/victory/pages/ui-features/modals.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Nov 2018 06:57:48 GMT -->
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -27,8 +28,9 @@
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="../index.html"><img src="../images/logo.svg" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="../index.html"><img src="../images/logo-mini.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo" href="../index.html"><img src="../images/logo.svg" alt="logo" /></a>
+        <a class="navbar-brand brand-logo-mini" href="../index.html"><img src="../images/logo-mini.svg"
+            alt="logo" /></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -63,8 +65,9 @@
             <li class="nav-item nav-profile">
               <div class="nav-link">
                 <div class="profile-image">
-                  <img src="../images/faces/face10.jpg" alt="image"/>
-                  <span class="online-status online"></span> <!--change class online to offline or busy as needed-->
+                  <img src="../images/faces/face10.jpg" alt="image" />
+                  <span class="online-status online"></span>
+                  <!--change class online to offline or busy as needed-->
                 </div>
                 <div class="profile-name">
                   <p class="name">
@@ -80,136 +83,346 @@
               <a class="nav-link" href="dashboard.html">
                 <i class="icon-rocket menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
-                
+
               </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="projects.html">
-                  <i class="icon-rocket menu-icon"></i>
-                  <span class="menu-title">Projects</span>
-                  
-                </a>
-              </li>
+              <a class="nav-link" href="projects.html">
+                <i class="icon-rocket menu-icon"></i>
+                <span class="menu-title">Projects</span>
+
+              </a>
+            </li>
         </nav>
         <!-- partial -->
         <div class="content-wrapper">
           <div class="row">
 
-            <!-- Modal starts -->
-                  <div class="modal fade" id="modalProjects" tabindex="-1" role="dialog" aria-labelledby="modalProjectsLabel" aria-hidden="false">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel-2">Add Projects</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                            <form class="dropzone" id="my-awesome-dropzone">
-                                <div class="form-group row">
-                                    <div class="col">
-                                        <label for="project-name" class="col-form-label">Project Name</label>
-                                        <input type="text" class="form-control" id="project-name" name="project_name">
-                                    </div>
-                                    <div class="col">
-                                        <label for="client-name" class="col-form-label">Client Name</label>
-                                        <input type="text" class="form-control" id="client-name" name="client_name">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col">
-                                        <label for="contract-date" class="col-form-label">Contract Date</label>
-                                        <input type="date" class="form-control" id="contract-date" name="contract_date">
-                                    </div>
-                                    <div class="col">
-                                        <label for="categories" class="col-form-label">Categorise</label>
-                                        <select name="categories" id="categories" class="form-control">
-                                          <option value="Electric">Electric</option>
-                                          <option value="tol">Tol</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="fallback">
-                                    <input name="file" type="file" multiple />
-                                </div>
-                              </form>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-success">Submit</button>
-                          <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-                        </div>
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Tol Lampung Sumatera</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
                       </div>
                     </div>
                   </div>
-                  <!-- Modal Ends -->
+                </div>
+              </div>
+            </div>
 
-                  <!-- Modal starts -->
-                  <div class="modal fade" id="modalTeams" tabindex="-1" role="dialog" aria-labelledby="modalProjectsLabel" aria-hidden="false">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel-2">Add Teams</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                              <form>
-                                  <div class="form-group">
-                                    <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                    <input type="text" class="form-control" id="recipient-name">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Message:</label>
-                                    <textarea class="form-control" id="message-text"></textarea>
-                                  </div>
-                                </form>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-success">Submit</button>
-                            <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-                          </div>
-                        </div>
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Gedung Serbaguna Kecamatan 12 Ilir</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
                       </div>
                     </div>
-                    <!-- Modal Ends -->
-        <!-- content-wrapper ends -->
-        <!-- partial:../../partials/_footer.html -->
-        <footer class="footer">
-          <div class="container-fluid clearfix">
-            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2017 <a href="#">UrbanUI</a>. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Pengembangan Jalan dan Jembatan Kabupaten MURA</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Pembangunan Rumah Susun</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Pemeliharaan Jalan Jalan Betung Raya</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : PT. Mura Jalan</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Pengembangan Waduk</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Tol Lampung Sumatera</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Tol Lampung Sumatera</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Tol Lampung Sumatera</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Tol Lampung Sumatera</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Tol Lampung Sumatera</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-left justify-content-md-left">
+                    <div class="ml-3">
+                      <h5 class="card-title">Proyek Tol Lampung Sumatera</h5>
+                      <div style="margin-top:10px; margin-bottom:5px;">
+                        <p class="mb-0 text-muted">Owner : M. Ridwan Zalbina</p>
+                        <p class="mb-0 text-muted">Start : 22-09-2019</p>
+                        <p class="mb-0 text-muted">Finsih : 22-09-2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Modal starts -->
+            <div class="modal fade" id="modalProjects" tabindex="-1" role="dialog" aria-labelledby="modalProjectsLabel"
+              aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel-2">Add Projects</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="dropzone" id="my-awesome-dropzone">
+                      <div class="form-group row">
+                        <div class="col">
+                          <label for="project-name" class="col-form-label">Project Name</label>
+                          <input type="text" class="form-control" id="project-name" name="project_name">
+                        </div>
+                        <div class="col">
+                          <label for="client-name" class="col-form-label">Client Name</label>
+                          <input type="text" class="form-control" id="client-name" name="client_name">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col">
+                          <label for="contract-date" class="col-form-label">Contract Date</label>
+                          <input type="date" class="form-control" id="contract-date" name="contract_date">
+                        </div>
+                        <div class="col">
+                          <label for="categories" class="col-form-label">Categorise</label>
+                          <select name="categories" id="categories" class="form-control">
+                            <option value="Electric">Electric</option>
+                            <option value="tol">Tol</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="fallback">
+                        <input name="file" type="file" multiple />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success">Submit</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal Ends -->
+
+            <!-- Modal starts -->
+            <div class="modal fade" id="modalTeams" tabindex="-1" role="dialog" aria-labelledby="modalProjectsLabel"
+              aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel-2">Add Teams</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Recipient:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                      <div class="form-group">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success">Submit</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal Ends -->
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+            <footer class="footer">
+              <div class="container-fluid clearfix">
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2017 <a
+                    href="#">UrbanUI</a>. All rights reserved.</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
+                    class="mdi mdi-heart text-danger"></i></span>
+              </div>
+            </footer>
+            <!-- partial -->
           </div>
-        </footer>
-        <!-- partial -->
+          <!-- row-offcanvas ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
       </div>
-      <!-- row-offcanvas ends -->
-    </div>
-    <!-- page-body-wrapper ends -->
-  </div>
-  <!-- container-scroller -->
-  <!-- plugins:js -->
-  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
-  <!-- endinject -->
-  <!-- Plugin js for this page-->
-  <!-- End plugin js for this page-->
-  <!-- inject:js -->
-  <script src="../js/off-canvas.js"></script>
-  <script src="../js/hoverable-collapse.js"></script>
-  <script src="../js/misc.js"></script>
-  <script src="../js/settings.js"></script>
-  <script src="../js/todolist.js"></script>
-  <!-- endinject -->
-  <!-- Custom js for this page-->
-  <script src="../js/modal-demo.js"></script>
-  <script src="../libs/dropzone/dist/dropzone.js"></script>
-  <!-- End custom js for this page-->
+      <!-- container-scroller -->
+      <!-- plugins:js -->
+      <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+      <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="../node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+      <!-- endinject -->
+      <!-- Plugin js for this page-->
+      <!-- End plugin js for this page-->
+      <!-- inject:js -->
+      <script src="../js/off-canvas.js"></script>
+      <script src="../js/hoverable-collapse.js"></script>
+      <script src="../js/misc.js"></script>
+      <script src="../js/settings.js"></script>
+      <script src="../js/todolist.js"></script>
+      <!-- endinject -->
+      <!-- Custom js for this page-->
+      <script src="../js/modal-demo.js"></script>
+      <script src="../libs/dropzone/dist/dropzone.js"></script>
+      <!-- End custom js for this page-->
 </body>
 
 
 <!-- Mirrored from www.urbanui.com/victory/pages/ui-features/modals.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Nov 2018 06:57:49 GMT -->
+
 </html>
