@@ -12260,6 +12260,8 @@ button.bg-info:focus,
 .bg-warning, .settings-panel .color-tiles .tiles.warning {
   background-color: #ffb463 !important; }
 
+  #mapid { height: 180px; }
+
 a.bg-warning:hover, .settings-panel .color-tiles a.tiles.warning:hover, a.bg-warning:focus, .settings-panel .color-tiles a.tiles.warning:focus,
 button.bg-warning:hover,
 .settings-panel .color-tiles button.tiles.warning:hover,
@@ -22252,5 +22254,8 @@ div.tagsinput {
   .landing-page .footer .footer-bottom {
     color: #ffffff;
     font-family: "roboto-medium", sans-serif; }
+  
+
+    
 
 /*# sourceMappingURL=maps/style.css.map */
