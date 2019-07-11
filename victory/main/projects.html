@@ -77,36 +77,61 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">
+              <a class="nav-link" href="dashboard.html">
                 <i class="icon-rocket menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
-                <span class="badge badge-success">New</span>
+                
               </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="projects.html">
+                  <i class="icon-rocket menu-icon"></i>
+                  <span class="menu-title">Projects</span>
+                  
+                </a>
+              </li>
         </nav>
         <!-- partial -->
         <div class="content-wrapper">
           <div class="row">
 
             <!-- Modal starts -->
-                  <div class="modal fade" id="modalProjects" tabindex="-1" role="dialog" aria-labelledby="modalProjectsLabel" aria-hidden="true">
+                  <div class="modal fade" id="modalProjects" tabindex="-1" role="dialog" aria-labelledby="modalProjectsLabel" aria-hidden="false">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel-2">Modal title</h5>
+                          <h5 class="modal-title" id="exampleModalLabel-2">Add Projects</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                  <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                  <input type="text" class="form-control" id="recipient-name">
+                            <form class="dropzone" id="my-awesome-dropzone">
+                                <div class="form-group row">
+                                    <div class="col">
+                                        <label for="project-name" class="col-form-label">Project Name</label>
+                                        <input type="text" class="form-control" id="project-name" name="project_name">
+                                    </div>
+                                    <div class="col">
+                                        <label for="client-name" class="col-form-label">Client Name</label>
+                                        <input type="text" class="form-control" id="client-name" name="client_name">
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                  <label for="message-text" class="col-form-label">Message:</label>
-                                  <textarea class="form-control" id="message-text"></textarea>
+                                <div class="form-group row">
+                                    <div class="col">
+                                        <label for="contract-date" class="col-form-label">Contract Date</label>
+                                        <input type="date" class="form-control" id="contract-date" name="contract_date">
+                                    </div>
+                                    <div class="col">
+                                        <label for="categories" class="col-form-label">Categorise</label>
+                                        <select name="categories" id="categories" class="form-control">
+                                          <option value="Electric">Electric</option>
+                                          <option value="tol">Tol</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="fallback">
+                                    <input name="file" type="file" multiple />
                                 </div>
                               </form>
                         </div>
@@ -120,11 +145,11 @@
                   <!-- Modal Ends -->
 
                   <!-- Modal starts -->
-                  <div class="modal fade" id="modalTeams" tabindex="-1" role="dialog" aria-labelledby="modalProjectsLabel" aria-hidden="true">
+                  <div class="modal fade" id="modalTeams" tabindex="-1" role="dialog" aria-labelledby="modalProjectsLabel" aria-hidden="false">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel-2">Modal title</h5>
+                            <h5 class="modal-title" id="exampleModalLabel-2">Add Teams</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
@@ -181,6 +206,7 @@
   <!-- endinject -->
   <!-- Custom js for this page-->
   <script src="../js/modal-demo.js"></script>
+  <script src="../libs/dropzone/dist/dropzone.js"></script>
   <!-- End custom js for this page-->
 </body>
 
