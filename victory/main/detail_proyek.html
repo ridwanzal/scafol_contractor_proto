@@ -30,7 +30,7 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html"><img src="../images/logo.svg" alt="logo" /></a>
+        <a class="navbar-brand brand-logo" href="index.html"><img src="../images/auth/logo_main2.svg" alt="logo" /></a>
         <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../images/logo-mini.svg" alt="logo" /></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
@@ -39,9 +39,9 @@
         </button>
         <ul class="navbar-nav">
           <li class="nav-item dropdown d-none d-lg-flex">
-            <a class="nav-link dropdown-toggle nav-btn" id="actionDropdown" href="#" data-toggle="dropdown">
+            <!-- <a class="nav-link dropdown-toggle nav-btn" id="actionDropdown" href="#" data-toggle="dropdown">
               <span class="btn">+ Create new</span>
-            </a>
+            </a> -->
             <div class="dropdown-menu navbar-dropdown dropdown-left" aria-labelledby="actionDropdown">
               <a class="dropdown-item" href="#">
                 <i class="icon-user text-primary"></i>
@@ -504,20 +504,399 @@ data-toggle="offcanvas">
                       <span class="mdi mdi-calendar"></span>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              <br>
+                  <small class="text-muted my-auto">14 min</small>
+                </li>
+                <li class="list">
+                  <div class="profile"><img src="../images/faces/face4.jpg" alt="image"><span class="offline"></span>
+                  </div>
+                  <div class="info">
+                    <p>James Richardson</p>
+                    <p>Away</p>
+                  </div>
+                  <small class="text-muted my-auto">2 min</small>
+                </li>
+                <li class="list">
+                  <div class="profile"><img src="../images/faces/face5.jpg" alt="image"><span class="online"></span>
+                  </div>
+                  <div class="info">
+                    <p>Madeline Kennedy</p>
+                    <p>Available</p>
+                  </div>
+                  <small class="text-muted my-auto">5 min</small>
+                </li>
+                <li class="list">
+                  <div class="profile"><img src="../images/faces/face6.jpg" alt="image"><span class="online"></span>
+                  </div>
+                  <div class="info">
+                    <p>Sarah Graves</p>
+                    <p>Available</p>
+                  </div>
+                  <small class="text-muted my-auto">47 min</small>
+                </li>
+              </ul>
+            </div>
+            <!-- chat tab ends -->
+          </div>
+        </div>
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">
+                <i class="icon-rocket menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+                <!-- <span class="badge badge-success">New</span> -->
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">
+                <i class="icon-shield menu-icon"></i>
+                <span class="menu-title">Projects</span>
+              </a>
+            </li>
 
-              <div class="row">
-                <div class="col-md-3">
-                  Akhir Kontrak :
-                </div>
-                <div class="col-md-9">
-                  <div id="datepicker-popup2" class="input-group date datepicker">
-                    <input type="text" value="09/12/2019" id="projectend" class="form-control">
-                    <div class="input-group-addon input-group-text">
-                      <span class="mdi mdi-calendar"></span>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="content-wrapper">
+          <div class="row">
+
+            <div class="col-md-9 col-lg-9 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Ongoing | Completed</h4>
+                  <ul class="nav nav-tabs tab-solid  tab-solid-primary" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="tab-6-1" data-toggle="tab" href="#home-6-1" role="tab"
+                        aria-controls="home-6-1" aria-selected="true"><i class="fa fa-file-text-o"></i>Project
+                        Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="tab-6-5" data-toggle="tab" href="#people-6-5" role="tab"
+                        aria-controls="people-6-5" aria-selected="false"><i class="fa fa-users"></i>Team</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="tab-6-2" data-toggle="tab" href="#profile-6-2" role="tab"
+                        aria-controls="profile-6-2" aria-selected="false"><i class="fa fa-bar-chart-o"></i>WBS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="tab-6-3" data-toggle="tab" href="#contact-6-3" role="tab"
+                        aria-controls="contact-6-3" aria-selected="false"><i class="fa fa-clock-o"></i>TS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="tab-6-4" data-toggle="tab" href="#contact-6-4" role="tab"
+                        aria-controls="contact-6-4" aria-selected="false"><i
+                          class="fa fa-pencil-square-o"></i>Design</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content tab-content-solid">
+                    <div class="tab-pane fade show active" id="home-6-1" role="tabpanel" aria-labelledby="tab-6-1">
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Nama Proyek :
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" value="Pembangunan Hotel" class="form-control" id="projectname"
+                            placeholder="Enter project name">
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Owner Proyek :
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" value="PUBM Sumsel" class="form-control" id="projectowner"
+                            placeholder="Enter project owner">
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Awal Kontrak :
+                        </div>
+                        <div class="col-md-9">
+                          <div id="datepicker-popup" class="input-group date datepicker">
+                            <input type="text" value="07/12/2019" id="projectstart" class="form-control">
+                            <div class="input-group-addon input-group-text">
+                              <span class="mdi mdi-calendar"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Akhir Kontrak :
+                        </div>
+                        <div class="col-md-9">
+                          <div id="datepicker-popup2" class="input-group date datepicker">
+                            <input type="text" value="09/12/2019" id="projectend" class="form-control">
+                            <div class="input-group-addon input-group-text">
+                              <span class="mdi mdi-calendar"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          Lokasi Proyek :
+                        </div>
+                        <div class="col-md-9">
+
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-9">
+                          <div class="map-container">
+                            <div id="map-with-marker" class="google-map"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <input type="text" class="form-control" id="projectlat" placeholder="Latitude">
+                            </div>
+                            <div class="col-md-6">
+                              <input type="text" class="form-control" id="projectlong" placeholder="Longitude">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="people-6-5" role="tabpanel" aria-labelledby="tab-6-5">
+                      <button class="btn btn-success btn-small" data-toggle="modal" data-target="#modalTeams">
+                        Add Teams
+                      </button>
+                    </div>
+                    <div class="tab-pane fade" id="profile-6-2" role="tabpanel" aria-labelledby="tab-6-2">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#import-wbs">Import
+                              WBS</a>
+                          </p>
+                        </div>
+
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <td>No</td>
+                              <td>Item Pekerjaan</td>
+                              <td>Volume</td>
+                              <td>Satuan</td>
+                              <td>Harga</td>
+                              <td>Total</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Persiapan</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>1.1</td>
+                              <td>Pembersihan Lahan</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>1.2</td>
+                              <td>Mobilisasi</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>1.3</td>
+                              <td>Direksi Kit</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Pondasi</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>2.1</td>
+                              <td>Galian</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>2.2</td>
+                              <td>Bekisting</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="contact-6-3" role="tabpanel" aria-labelledby="tab-6-3">
+                      <div class="row">
+                        <div class="col-md-12 ">
+                          <p>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#import-ts">Import
+                              Data</a>
+                          </p>
+
+                          <table class="table table-hovered">
+                            <thead>
+                              <tr>
+                                <td>Item Pekerjaan</td>
+                                <td>Bobot</td>
+                                <td>Day 1</td>
+                                <td>Day 2</td>
+                                <td>Day 3</td>
+                                <td>Day 4</td>
+                                <td>Day x</td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1. Persiapan</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>1.1 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>1.2 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>1.3 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>2. Pondasi</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>2.1 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>2.2 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>2.3 ------------</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-12 text-center">
+                          <p class="mt-4 pt-4 mx-auto">
+                            There is no data<br>
+                            Input your Contract Schedule and WBS First
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="contact-6-4" role="tabpanel" aria-labelledby="tab-6-4">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#upload-design">Upload
+                              Design</a>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#create-folder">Create
+                              Folder</a>
+                          </p>
+
+                          <p class="mt-4 pt-4 mx-auto  text-center">
+                            There is no data<br>
+                            Input your Contract Schedule and WBS First
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -545,24 +924,39 @@ data-toggle="offcanvas">
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-md-3">
+        <div class="modal fade" id="import-wbs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ongoing | Completed</h5>
 
-                </div>
-                <div class="col-md-9">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <input type="text" class="form-control" id="projectlat" placeholder="Latitude">
-                    </div>
-                    <div class="col-md-6">
-                      <input type="text" class="form-control" id="projectlong" placeholder="Longitude">
-                    </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="false">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    Ctrl + V (Paste)
+                  </div>
+                  <div class="col-md-6">
+                    Ctrl + C (Copy)
                   </div>
                 </div>
+                <button type="button" id="add" class="btn btn-success">Add row</button>
+                <div id="hot"></div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
               </div>
 
             </div>
-            <div class="tab-pane fade" id="people-6-5" role="tabpanel" aria-labelledby="tab-6-5">
+
+          </div>
+        </div>
 
             </div>
             <div class="tab-pane fade" id="profile-6-2" role="tabpanel" aria-labelledby="tab-6-2">
@@ -1026,186 +1420,280 @@ aria-hidden="true">
 </div>
 <!-- container-scroller -->
 
-<!-- plugins:js -->
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
-<!-- endinject -->
-<!-- Plugin js for this page-->
-<script src="../node_modules/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
-<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
-<script src="../node_modules/raphael/raphael.min.js"></script>
-<script src="../node_modules/morris.js/morris.min.js"></script>
-<script src="../node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
-<script src="../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- End plugin js for this page-->
-<script src="../node_modules/jsgrid/dist/jsgrid.min.js"></script>
-<!-- inject:js -->
-<script src="../js/off-canvas.js"></script>
-<script src="../js/hoverable-collapse.js"></script>
-<script src="../js/misc.js"></script>
-<script src="../js/settings.js"></script>
-<script src="../js/todolist.js"></script>
-<!-- endinject -->
-<!-- <script src="../js/js-grid.js"></script> -->
-<script src="../js/db.js"></script>
-<!-- Custom js for this page-->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnT63XUjqjPgXZ0lFTU_pdpfUX7swzTTM&amp;callback=initMap"></script>
-<script src="../js/google-maps.js"></script>
-<script src="../js/formpickers.js"></script>
-<script src="../js/dashboard.js"></script>
-<!-- End custom js for this page-->
+  <!-- Modal starts -->
+  <div class="modal fade" id="modalTeams" tabindex="-1" role="dialog" aria-labelledby="modalProjectsLabel"
+    aria-hidden="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel-2">Add Teams</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Email:</label>
+              <input type="text" class="form-control" id="recipient-name" placeholder="Please Input Your Email">
+            </div>
+            <div class="form-group">
+              <!-- <textarea class="form-control" id="message-text"></textarea> -->
+              <div class="form-group">
+                <label for="exampleSelectPrimary">Select Project</label>
+                <select class="form-control border-primary" id="exampleSelectPrimary">
+                  <option value="0">Please Select Project</option>
+                  <option>Proyek Tol Lampung Sumatera1</option>
+                  <option>Proyek Gedung Serbaguna Kecamatan 12 Ilir</option>
+                  <option>Proyek Pengembangan Jalan Dan Jembatan Kabupaten MURA</option>
+                </select>
+              </div>
+              <label class="col-form-label">Add Members</label>
+              <div class="card card-inverse-secondary">
+                <div class="card-body" style="background: #fff;">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                      <input type="text" class="form-control" placeholder="Please Input Your Name" id="recipient-name">
+                    </div>
+                    <div class="col-md-12 col-lg-12">
+                      <div style="display:flex;">
+                        <div class="form-check form-check-flat">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Engineering
+                          </label>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div class="form-check form-check-flat">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Procurement
+                          </label>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div class="form-check form-check-flat">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Construction
+                          </label>
+                        </div>
+                      </div>
+                      <div style="display:flex;">
+                        <div class="form-check form-check-flat">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Finance
+                          </label>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div class="form-check form-check-flat">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            HSE
+                          </label>
+                        </div>
+                      </div>
+                      <button style="margin-top:10px;" type="button" class="btn btn-primary btn-small">Add
+                        Team
+                        Member</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success">Submit</button>
+          <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<script>
 
-  var hot;
+  <!-- plugins:js -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="../node_modules/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+  <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+  <script src="../node_modules/raphael/raphael.min.js"></script>
+  <script src="../node_modules/morris.js/morris.min.js"></script>
+  <script src="../node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+  <script src="../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+  <!-- End plugin js for this page-->
+  <script src="../node_modules/jsgrid/dist/jsgrid.min.js"></script>
+  <!-- inject:js -->
+  <script src="../js/off-canvas.js"></script>
+  <script src="../js/hoverable-collapse.js"></script>
+  <script src="../js/misc.js"></script>
+  <script src="../js/settings.js"></script>
+  <script src="../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- <script src="../js/js-grid.js"></script> -->
+  <script src="../js/db.js"></script>
+  <!-- Custom js for this page-->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnT63XUjqjPgXZ0lFTU_pdpfUX7swzTTM&amp;callback=initMap"></script>
+  <script src="../js/google-maps.js"></script>
+  <script src="../js/formpickers.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <!-- End custom js for this page-->
 
-  $(document).ready(function () {
-    CreateHandsonTable();
-    OnNewActivityModalLoseFocus();
-  });
+  <script>
 
-  function CreateHandsonTable() {
-    $('#import-wbs').on('shown.bs.modal', function (e) {
-      var data = [['No', 'Item', 'Volume', 'Satuan', 'Harga'], ['1'], ['2'], ['3'], ['4'], ['5'], ['6'], ['7'], ['8'], ['9'], ['10'],];
-      var container = document.getElementById("hot");
-      var hot = new Handsontable(container, {
-        data: data,
-        licenseKey: 'non-commercial-and-evaluation',
-        outsideClickDeselects: false,
-        width: '100%',
+    var hot;
+
+    $(document).ready(function () {
+      CreateHandsonTable();
+      OnNewActivityModalLoseFocus();
+    });
+
+    function CreateHandsonTable() {
+      $('#import-wbs').on('shown.bs.modal', function (e) {
+        var data = [['No', 'Item', 'Volume', 'Satuan', 'Harga'], ['1'], ['2'], ['3'], ['4'], ['5'], ['6'], ['7'], ['8'], ['9'], ['10'],];
+        var container = document.getElementById("hot");
+        var hot = new Handsontable(container, {
+          data: data,
+          licenseKey: 'non-commercial-and-evaluation',
+          outsideClickDeselects: false,
+          width: '100%',
+        });
+        document.querySelector('#add').addEventListener('click', function () {
+          var col = hot.countRows();
+          hot.alter('insert_row', col, 1);
+          hot.setDataAtCell(col, 'No', '');
+          hot.setDataAtCell(col, 1, '');
+          hot.setDataAtCell(col, 2, '');
+          hot.setDataAtCell(col, 3, '');
+          hot.setDataAtCell(col, 4, '');
+          hot.setDataAtCell(col, 5, '');
+          hot.setDataAtCell(col, 6, '');
+          hot.setDataAtCell(col, 7, '');
+          hot.setDataAtCell(col, 8, '');
+          hot.setDataAtCell(col, 9, '');
+          hot.setDataAtCell(col, 10, '')
+        })
       });
-      document.querySelector('#add').addEventListener('click', function() {
-        var col = hot.countRows();
-        hot.alter('insert_row', col, 1);
-        hot.setDataAtCell(col, 'No', '');
-        hot.setDataAtCell(col, 1, '');
-        hot.setDataAtCell(col, 2, '');
-        hot.setDataAtCell(col, 3, '');
-        hot.setDataAtCell(col, 4, '');
-        hot.setDataAtCell(col, 5, '');
-        hot.setDataAtCell(col, 6, '');
-        hot.setDataAtCell(col, 7, '');
-        hot.setDataAtCell(col, 8, '');
-        hot.setDataAtCell(col, 9, '');
-        hot.setDataAtCell(col, 10, '')
-      })
-    });
-    $('#import-wbs').on('hidden.bs.modal', function (e) {
-      hot.destroy();
-    });
-  }
+      $('#import-wbs').on('hidden.bs.modal', function (e) {
+        hot.destroy();
+      });
+    }
 
-  function OnNewActivityModalLoseFocus() {
-    $(".modal").on("hide.bs.modal", function () {
-      OnCloseNewActivityBtnClick();
-    });
-  }
+    function OnNewActivityModalLoseFocus() {
+      $(".modal").on("hide.bs.modal", function () {
+        OnCloseNewActivityBtnClick();
+      });
+    }
 
-  function OnCloseNewActivityBtnClick() {
-    var modal = $('#import-wbs');
-    var tab_content = $(modal).find('.tab-content');
-    var html = $(tab_content).html();
-    $(tab_content).html(html);
-    /* Reinitialize the newly Applied HTML */
-  }
-</script>
+    function OnCloseNewActivityBtnClick() {
+      var modal = $('#import-wbs');
+      var tab_content = $(modal).find('.tab-content');
+      var html = $(tab_content).html();
+      $(tab_content).html(html);
+      /* Reinitialize the newly Applied HTML */
+    }
+  </script>
 
 
-<script type="text/javascript">
+  <script type="text/javascript">
 
-  if($("#tambahTableJs").length) {
-    $("#tambahTableJs").jsGrid({
-      height: "500px",
-      width: "100%",
-      filtering: true,
-      editing: true,
-      inserting: true,
-      sorting: true,
-      paging: true,
-      autoload: true,
-      pageSize: 15,
-      pageButtonCount: 5,
-      deleteConfirm: "Do you really want to delete the client?",
-      data: [
-      {
-        "Item Pekerjaan": "1. Persiapan",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      },
-      {
-        "Item Pekerjaan": "1.1 ------------",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      },
-      {
-        "Item Pekerjaan": "1.2 ------------",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      },
-      {
-        "Item Pekerjaan": "1.3 ------------",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      },
-      {
-        "Item Pekerjaan": "2. Pondasi",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      },
-      {
-        "Item Pekerjaan": "2.1 ------------",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      },
-      {
-        "Item Pekerjaan": "2.2 ------------",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      },
-      {
-        "Item Pekerjaan": "2.3 ------------",
-        "Bobot": null,
-        "Day 1": null,
-        "Day 2": "",
-      }
-      ],
-      fields: [{
-        name: "Item Pekerjaan",
-        type: "text",
-        width: 150
-      },
-      {
-        name: "Bobot",
-        type: "text",
-        width: 50
-      },
-      {
-        name: "Day 1",
-        type: "text",
-        width: 50
-      },
-      {
-        name: "Day 2",
-        type: "text",
-        width: 50
-      },
-      {
-        type: "control"
-      }
-      ]
-    });
-  }
+    if ($("#tambahTableJs").length) {
+      $("#tambahTableJs").jsGrid({
+        height: "500px",
+        width: "100%",
+        filtering: true,
+        editing: true,
+        inserting: true,
+        sorting: true,
+        paging: true,
+        autoload: true,
+        pageSize: 15,
+        pageButtonCount: 5,
+        deleteConfirm: "Do you really want to delete the client?",
+        data: [
+          {
+            "Item Pekerjaan": "1. Persiapan",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          },
+          {
+            "Item Pekerjaan": "1.1 ------------",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          },
+          {
+            "Item Pekerjaan": "1.2 ------------",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          },
+          {
+            "Item Pekerjaan": "1.3 ------------",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          },
+          {
+            "Item Pekerjaan": "2. Pondasi",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          },
+          {
+            "Item Pekerjaan": "2.1 ------------",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          },
+          {
+            "Item Pekerjaan": "2.2 ------------",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          },
+          {
+            "Item Pekerjaan": "2.3 ------------",
+            "Bobot": null,
+            "Day 1": null,
+            "Day 2": "",
+          }
+        ],
+        fields: [{
+          name: "Item Pekerjaan",
+          type: "text",
+          width: 150
+        },
+        {
+          name: "Bobot",
+          type: "text",
+          width: 50
+        },
+        {
+          name: "Day 1",
+          type: "text",
+          width: 50
+        },
+        {
+          name: "Day 2",
+          type: "text",
+          width: 50
+        },
+        {
+          type: "control"
+        }
+        ]
+      });
+    }
 
 
-</script>
+  </script>
 </body>
+
 </html>
