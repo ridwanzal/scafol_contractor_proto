@@ -763,11 +763,11 @@
                           <table>
                             <tr>
                               <td>
-                                  <img src="../images/partly_cloudy.png" alt="">
+                                  <img src="../images/partly_cloudy.png" alt="" style="margin-right : 20px;">
                               </td>
                               <td>
-                                  <h6>Weather</h6>
-                                  <p>Cuaca : Cerah Berawan 28C</p>
+                                  <label style="font-size:14px; font-weight:bold;">City :&nbsp;<span id="val_kota" style="font-weight:lighter;"></span></label><br/>
+                                  <label style="font-size:14px;  font-weight:bold;">Weather :&nbsp;<span id="val_cuaca" style="font-weight:lighter;"></span></label>
                               </td>
                             </tr>
                           </table>
@@ -1104,6 +1104,26 @@
 <!-- Custom js for this page-->
 <script src="../js/dashboard.js"></script>
 <script src="../js/calendar.js"></script>
+<script>
+  $(document).ready(function(){
+    $.ajax({
+      url : 'https://api.openweathermap.org/data/2.5/weather?q=Palembang&appid=a6f1daa03a7c47215f57a8c27dc40041',
+      type : 'GET',
+      dataType : 'json',
+      success  : function(callback){
+        console.log(callback);
+        let res = callback;
+        if(res.cod="200"){
+          console.log('success');
+          let cuaca = res.weather[0].main + ' (' + res.weather[0].description + ')' ;
+          $('#val_kota').text('').text(res.name.toString());
+
+          $('#val_cuaca').text('').text(cuaca);
+        }
+      }
+    })
+  });
+</script>
 <!-- End custom js for this page-->
 </body>
 
