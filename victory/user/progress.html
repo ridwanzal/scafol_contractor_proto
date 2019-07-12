@@ -25,27 +25,27 @@
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
-       <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
         <a class="navbar-brand brand-logo" href="../index.html"><img src="../images/auth/logo_main2.svg"
-          alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini" href="../index.html"><img src="../images/auth/logo-mini.svg"
             alt="logo" /></a>
-          </div>
-          <div class="navbar-menu-wrapper d-flex align-items-center">
-            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-              <span class="icon-menu"></span>
-            </button>
-            <ul class="navbar-nav">
-            </ul>
-            <ul class="navbar-nav navbar-nav-right">
-            </ul>
-            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-            data-toggle="offcanvas">
-            <span class="icon-menu"></span>
-          </button>
-        </div>
-      </nav>
+        <a class="navbar-brand brand-logo-mini" href="../index.html"><img src="../images/auth/logo-mini.svg"
+            alt="logo" /></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav">
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+          data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <div class="row row-offcanvas row-offcanvas-right">
@@ -237,7 +237,7 @@
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <ul class="nav">
-               <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" href="dashboard.html">
                 <i class="icon-rocket menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
@@ -257,7 +257,7 @@
                 <!-- <span class="badge badge-success">New</span> -->
               </a>
             </li>
-             <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" href="user_finance.html">
                 <i class="icon-rocket menu-icon"></i>
                 <span class="menu-title">Finance</span>
@@ -279,154 +279,80 @@
         <div class="content-wrapper">
           <div class="row">
 
-            <div class="col-md-9 col-lg-9 grid-margin stretch-card">
+            <div class="col-md-12 col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
 
                   <div class="d-flex align-items-center">
-                    <h6 class="btn btn-primary" data-toggle="modal" data-target="#uploaddoc">Upload Design</h6>
+                    <h6 class="btn btn-primary" data-toggle="modal" data-target="#uploaddoc">Full View</h6>
                   </div>
                   <br />
-                  Desaign Req.
                   <table class="table table hovered">
                     <tr>
                       <td>No</td>
-                      <td>Nama</td>
-                      <td>Req. by</td>
-                      <td>Date</td>
-                      <td>Keterangan</td>
+                      <td>Work</td>
+                      <td>Volume</td>
+                      <td>Label</td>
+                      <td>Progress</td>
+                      <td>Target</td>
+                      <td>Photo</td>
+                      <td>Update</td>
+
                     </tr>
                     <tr>
                       <td>1</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                      <td>1.1. Pondasi Rumah</td>
+                      <td>1200m2</td>
+                      <td>m2</td>
+                      <td>10%</td>
+                      <td>11%</td>
+                      <td><img class="img-sm rounded-circle" src="../images/faces/face3.jpg" alt=""></td>
+                      <td>22-06-2019</td>
                     </tr>
                     <tr>
                       <td>2</td>
+                      <td>1.2. Keramik Lantai</td>
+                      <td>900m2</td>
+                      <td>m2</td>
+                      <td>2%</td>
+                      <td>3%</td>
+                      <td><img class="img-sm rounded-circle" src="../images/faces/face3.jpg" alt=""></td>
+                      <td>25-06-2019</td>
+                    </tr>
+                  </table>
+                  <br />
+                  <h5>Target Realisasi</h5>
+                  <table>
+                    <tr>
+                      <td width="100px">Realisasi</td>
                       <td></td>
+                      <td>:</td>
+                      <td>&nbsp;&nbsp;&nbsp;10%</td>
+                    </tr>
+                    <tr>
+                      <td width="100px">Deviasi </td>
                       <td></td>
-                      <td></td>
-                      <td></td>
+                      <td>:</td>
+                      <td>&nbsp;&nbsp;&nbsp;9%</td>
                     </tr>
                   </table>
 
 
 
-
-                  Make Req. Desaign
-                  <table class="table table hovered">
-                    <tr>
-                      <td>No</td>
-                      <td>Nama File</td>
-                      <td>Upload by</td>
-                      <td>Date</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td><a href="" data-toggle="modal" data-target="#exampleModal-2">Desaign Atap</a></td>
-                      <td>Reza</td>
-                      <td>10-07-2019</td>
-                      <td class="text-right">
-                        <a href="#" class="btn btn-primary"><i class="fa fa-download"></i></a>
-                        <a href="#" class="btn btn-danger"><i class="fa fa-times"></i></a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td></td>
-                      <td><a href="" data-toggle="modal" data-target="#exampleModal-2">- Revisi 1</a></td>
-                      <td>Adit</td>
-                      <td>11-07-2019</td>
-                      <td class="text-right">
-                      </td>
-                    </tr>
-                  </table>
                 </div>
               </div>
             </div>
-
-            <div class="col-md-3 col-lg-3 grid-margin stretch-card">
-              <div class="col-md-12 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h6 class="text-center">Feed Collab</h6>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <input type="" name="" class="form-control" placeholder="Post Memo">
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width:100%;">Submit</button>
-                      </div>
-                    </div>
-
-                    <div class="row">
-
-                      <div class="list d-flex align-items-center border-bottom py-3">
-                        <img class="img-sm rounded-circle" src="../images/faces/face3.jpg" alt="">
-                        <div class="wrapper w-100 ml-3">
-                          <p class="mb-0"><b>Randa</b></p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                              <p class="mb-0">Ah she up <br>
-                                <small class="text-muted ml-auto">1 min ago</small>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="list d-flex align-items-center border-bottom py-3">
-                        <img class="img-sm rounded-circle" src="../images/faces/face2.jpg" alt="">
-                        <div class="wrapper w-100 ml-3">
-                          <p class="mb-0"><b>Rusni</b></p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                              <p class="mb-0">Yeah me too! <br>
-                                <small class="text-muted ml-auto">25 min ago</small>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-
-                      <div class="list d-flex align-items-center border-bottom py-3">
-                        <img class="img-sm rounded-circle" src="../images/faces/face4.jpg" alt="">
-                        <div class="wrapper w-100 ml-3">
-                          <p class="mb-0"><b>Dobrick</b></p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                              <p class="mb-0">This So Awesome Fine Yeah! <br>
-                                <small class="text-muted ml-auto">2 hours ago</small>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
           </div>
-
         </div>
 
 
         <div class="modal fade" id="uploaddoc" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2"
           aria-hidden="true">
-          <div class="modal-dialog" role="document">
+          <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel-2">
-                  Upload Document
+                  Progress Info
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -436,47 +362,81 @@
                 <div class="row">
 
                   <div class="col-md-12">
-                    <blockquote class="blockquote blockquote-primary">
-                      <p class="text-center">
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <p class="text-center">Drag Document</p>
-                        <br>
-                        <br>
-                      </p>
-                    </blockquote>
-
-                    <div class="col-md-12">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="d-lg-flex flex-row text-center text-lg-left">
-                            <img src="../images/faces/face23.jpg" class="img-lg rounded" alt="image" />
-                            <div class="ml-lg-3">
-                              <h6>My_sketh.jpg</h6>
-                              <p class="text-muted">Sketsa Wajah Saya</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <br>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="d-lg-flex flex-row text-center text-lg-left">
-                            <img src="../images/faces/adobe-pdf-icon.svg" class="img-lg rounded" alt="image" />
-                            <div class="ml-lg-3">
-                              <h6>Kontruksi_rules.pdf</h6>
-                              <p class="text-muted">Kontruksi Aturan Bangunan Barang dan Bahan Dalam dan Luar</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
+                    <table class="table table hovered" >
+                      <tr>
+                        <td>No</td>
+                        <td>Work</td>
+                        <td>Volume</td>
+                        <td>Unit</td>
+                        <td>Week 1</td>
+                        <td>Week 2</td>
+                        <td>Week 3</td>
+                        <td>Week 4</td>
+                        <td>Week 5</td>
+                        <td>Week X</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>1.1. Pondasi Rumah</td>
+                        <td>1200m2</td>
+                        <td>m2</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>1.2. Keramik Lantai</td>
+                        <td>900m2</td>
+                        <td>m2</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>1.2. Keramik Lantai</td>
+                        <td>900m2</td>
+                        <td>m2</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>1.2. Keramik Lantai</td>
+                        <td>900m2</td>
+                        <td>m2</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>1.2. Keramik Lantai</td>
+                        <td>900m2</td>
+                        <td>m2</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                        <td>5%</td>
+                      </tr>
+                    </table>
                   </div>
-
-
 
                 </div>
               </div>
@@ -579,7 +539,7 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-success">Save</button>
                 <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
               </div>
             </div>
