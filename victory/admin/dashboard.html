@@ -8,7 +8,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>User Panel</title>
+  <title>Admin Panel</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="../node_modules/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="../node_modules/fullcalendar/dist/fullcalendar.min.css" />
@@ -34,7 +34,7 @@
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
         <a class="navbar-brand brand-logo" href="../index.html"><img src="../images/auth/logo_main2.svg"
             alt="logo" /></a>
-        <a class="navbar-brand brand-logo-mini" href="../index.html"><img src="../images/auth/logo_mini.svg"
+        <a class="navbar-brand brand-logo-mini" href="../index.html"><img src="../images/auth/logo-mini.svg"
             alt="logo" /></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
@@ -413,34 +413,24 @@
               <a class="nav-link" href="dashboard.html">
                 <i class="icon-rocket menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
-                <!-- <span class="badge badge-success">New</span> -->
               </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="engineering.html">
                 <i class="icon-rocket menu-icon"></i>
-                <span class="menu-title">Engineering</span>
+                <span class="menu-title">Projects</span>
+              </a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">
+                <i class="icon-shield menu-icon"></i>
+                <span class="menu-title">Projects</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="user_procurement.html">
-                <i class="icon-rocket menu-icon"></i>
-                <span class="menu-title">Procurement</span>
-                <!-- <span class="badge badge-success">New</span> -->
-              </a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="user_finance.html">
-                <i class="icon-rocket menu-icon"></i>
-                <span class="menu-title">Finance</span>
-                <!-- <span class="badge badge-success">New</span> -->
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="progress.html">
-                <i class="icon-rocket menu-icon"></i>
-                <span class="menu-title">Progress</span>
-                <!-- <span class="badge badge-success">New</span> -->
+              <a class="nav-link" href="setting.html">
+                <i class="icon-settings menu-icon"></i>
+                <span class="menu-title">Settings</span>
               </a>
             </li>
             <!-- <li class="nav-item">
@@ -761,15 +751,9 @@
                             <div class="progress progress-lg mt-2">
                               <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
                                 role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
-                                aria-valuemax="100">60%
-                                </div>
-                             </div> 
+                                aria-valuemax="100">60%</div>
+                            </div>
                           </div>
-                          <div></div>
-                          <div></div>
-                          <br/>
-                            <h4>Sisa Masa Kerja</h4>
-                            <p>100 Hari</p>
                         </div>
                       </div>
                     </div>
@@ -786,13 +770,21 @@
                                   <label style="font-size:14px;  font-weight:bold;">Weather :&nbsp;<span id="val_cuaca" style="font-weight:lighter;"></span></label>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                  <label style="font-size:14px; font-weight:bold;">Sisa Masa Kerja</label><br/>
+                                  <label style="font-size:14px;  font-weight:bold;">Weather :&nbsp;<span id="val_cuaca" style="font-weight:lighter;"></span></label>
+                              </td>
+                            </tr>
                           </table>
+                          
+                          
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="row" style="margin-top:-30px;">
+                  <div class="row">
                     <div class="col-md-12  grid-margin stretch-card">
                       <div class="card">
                         <div class="card-body">
@@ -972,13 +964,9 @@
                   </div>
 
                   <div class="row">
-                    <!-- <h5 class="mb-3">Gallery Yang Diupload Hari ini</h5> -->
                     <div class="card">
                       <div class="card-body">
                         <h5 class="card-title">Gallery Yang Diupload Hari ini</h5>
-                        <!-- <p class="card-text">
-                        Click on any image to open in lightbox gallery
-                      </p> -->
                         <div id="lightgallery" class="row lightGallery">
                           <a href="../images/samples/1280x768/1.jpg" class="image-tile"><img
                               src="../images/samples/300x300/1.jpg" alt="image small"></a>
@@ -1116,7 +1104,6 @@
 <script src="../js/todolist.js"></script>
 <!-- endinject -->
 <!-- Custom js for this page-->
-<script src="../js/light-gallery.js"></script>
 <script src="../js/dashboard.js"></script>
 <script src="../js/calendar.js"></script>
 <script>
