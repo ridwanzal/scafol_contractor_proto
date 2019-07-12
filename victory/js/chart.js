@@ -145,8 +145,8 @@ $(function() {
   var areaData = {
     labels: ["2013", "2014", "2015", "2016", "2017"],
     datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
+      label: 'Rp',
+      data: [30000000, 50000000, 10000000, 9000000, 1000000],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
