@@ -429,7 +429,7 @@
                 <!-- <span class="badge badge-success">New</span> -->
               </a>
             </li>
-             <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" href="user_finance.html">
                 <i class="icon-rocket menu-icon"></i>
                 <span class="menu-title">Finance</span>
@@ -439,7 +439,7 @@
             <li class="nav-item">
               <a class="nav-link" href="progress.html">
                 <i class="icon-rocket menu-icon"></i>
-                <span class="menu-title">Progress</span>
+                <span class="menu-title">Construction</span>
                 <!-- <span class="badge badge-success">New</span> -->
               </a>
             </li>
@@ -762,14 +762,14 @@
                               <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
                                 role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
                                 aria-valuemax="100">60%
-                                </div>
-                             </div> 
+                              </div>
+                            </div>
                           </div>
                           <div></div>
                           <div></div>
-                          <br/>
-                            <h4>Sisa Masa Kerja</h4>
-                            <p>100 Hari</p>
+                          <br />
+                          <h4>Sisa Masa Kerja</h4>
+                          <p>100 Hari</p>
                         </div>
                       </div>
                     </div>
@@ -779,11 +779,13 @@
                           <table>
                             <tr>
                               <td>
-                                  <img src="../images/partly_cloudy.png" alt="" style="margin-right : 20px;">
+                                <img src="../images/partly_cloudy.png" alt="" style="margin-right : 20px;">
                               </td>
                               <td>
-                                  <label style="font-size:14px; font-weight:bold;">City :&nbsp;<span id="val_kota" style="font-weight:lighter;"></span></label><br/>
-                                  <label style="font-size:14px;  font-weight:bold;">Weather :&nbsp;<span id="val_cuaca" style="font-weight:lighter;"></span></label>
+                                <label style="font-size:14px; font-weight:bold;">City :&nbsp;<span id="val_kota"
+                                    style="font-weight:lighter;"></span></label><br />
+                                <label style="font-size:14px;  font-weight:bold;">Weather :&nbsp;<span id="val_cuaca"
+                                    style="font-weight:lighter;"></span></label>
                               </td>
                             </tr>
                           </table>
@@ -1120,17 +1122,17 @@
 <script src="../js/dashboard.js"></script>
 <script src="../js/calendar.js"></script>
 <script>
-  $(document).ready(function(){
+  $(document).ready(function () {
     $.ajax({
-      url : 'https://api.openweathermap.org/data/2.5/weather?q=Palembang&appid=a6f1daa03a7c47215f57a8c27dc40041',
-      type : 'GET',
-      dataType : 'json',
-      success  : function(callback){
+      url: 'https://api.openweathermap.org/data/2.5/weather?q=Palembang&appid=a6f1daa03a7c47215f57a8c27dc40041',
+      type: 'GET',
+      dataType: 'json',
+      success: function (callback) {
         console.log(callback);
         let res = callback;
-        if(res.cod="200"){
+        if (res.cod = "200") {
           console.log('success');
-          let cuaca = res.weather[0].main + ' (' + res.weather[0].description + ')' ;
+          let cuaca = res.weather[0].main + ' (' + res.weather[0].description + ')';
           $('#val_kota').text('').text(res.name.toString());
 
           $('#val_cuaca').text('').text(cuaca);
